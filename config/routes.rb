@@ -1,6 +1,7 @@
 MillsComputerClub::Application.routes.draw do
 
-	get '/', to 'application#index'
+  get "welcome/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
