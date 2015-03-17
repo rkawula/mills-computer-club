@@ -3,7 +3,6 @@ MillsComputerClub::Application.routes.draw do
   get "welcome/index"
   root to: 'welcome#index'
 
-
   # Routes for our html pages to show up.
   match 'index.html' => 'welcome#index'
   match 'about.html' => 'welcome#about'
