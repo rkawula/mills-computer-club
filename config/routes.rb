@@ -4,10 +4,10 @@ MillsComputerClub::Application.routes.draw do
   root to: 'welcome#index'
 
   # Routes for our html pages to show up.
-  match 'index.html' => 'welcome#index'
-  match 'about.html' => 'welcome#about'
-  match 'blog.html' => 'welcome#blog'
-  match 'contact.html' => 'welcome#contact'
+  match '/index', :to => 'welcome#index'
+  match '/about', :to => 'welcome#about'
+  match '/blog', :to => 'welcome#blog'
+  match '/contact', :to => 'welcome#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
