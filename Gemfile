@@ -9,6 +9,7 @@ gem 'rails', '3.2.21'
 group :development, :test do
   gem 'sqlite3'
   gem 'debugger'
+  gem 'webrick', '~> 1.3.1'
 end
 
 group :test do
