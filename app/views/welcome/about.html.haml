@@ -21,7 +21,7 @@
                         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   %body
     .brand Mills Computer Club
-    .address-bar 5000 MacArthur Boulevard | Oakland, CA 94613 | ???.???.????
+    .address-bar 5000 MacArthur Boulevard | Oakland, CA 94613 | mcc@mills.edu
     / Navigation
     %nav.navbar.navbar-default{:role => "navigation"}
       .container
@@ -38,13 +38,13 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li
-              %a{:href => "index.html"} Home
+              %a{:href => root_path} Home
             %li
-              %a{:href => "about.html"} About
+              %a{:href => about_path} About
             %li
-              %a{:href => "blog.html"} Blog
+              %a{:href => blog_path} Blog
             %li
-              %a{:href => "contact.html"} Contact
+              %a{:href => contact_path} Contact
         / /.navbar-collapse
       / /.container
     .container

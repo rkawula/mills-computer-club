@@ -38,13 +38,14 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li
-              %a{:href => "index.html"} Home
+              / root_path takes you to wherever you've sent the 'root' route
+              %a{:href => root_path} Home
             %li
-              %a{:href => "about.html"} About
+              %a{:href => about_path} About
             %li
-              %a{:href => "blog.html"} Blog
+              %a{:href => blog_path} Blog
             %li
-              %a{:href => "contact.html"} Contact
+              %a{:href => contact_path} Contact
         / /.navbar-collapse
       / /.container
     .container

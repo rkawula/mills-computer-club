@@ -38,13 +38,13 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li
-              %a{:href => "index.html"} Home
+              %a{:href => root_path} Home
             %li
-              %a{:href => "about.html"} About
+              %a{:href => about_path} About
             %li
-              %a{:href => "blog.html"} Blog
+              %a{:href => blog_path} Blog
             %li
-              %a{:href => "contact.html"} Contact
+              %a{:href => contact_path} Contact
         / /.navbar-collapse
       / /.container
     .container
@@ -58,7 +58,7 @@
               %hr
           .col-md-8
             / Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it!
-            %iframe{:width => "100%", :frameborder => "0", :height => "400", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.com/maps?hl=en&amp;ie=UTF8&ll=37.0625,-95.677068&spn=56.506174,79.013672&t=m&amp;z=4&output=embed"}
+            %iframe{:width => "100%", :frameborder => "0", :height => "400", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.com/maps?hl=en&ie=UTF8&ll=37.0625,-95.677068&spn=56.506174,79.013672&t=m&z=4&output=embed"}
           .col-md-4
             %p
               Phone:
