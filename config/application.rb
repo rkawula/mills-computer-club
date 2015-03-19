@@ -56,6 +56,8 @@ module MillsComputerClub
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    # This helps deploy on heroku
+    config.assets.initialize_on_precompile = false
     # This enables vendor CSS files:
     #config.sass.load_paths << File.expand_path('mills-computer-club/vendor/assets/stylesheets/')
 
