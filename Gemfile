@@ -5,7 +5,25 @@ gem 'rails', '3.2.21'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# for Heroku deployment - as described in Ap. A of ELLS book
+group :development, :test do
+  gem 'sqlite3'
+  gem 'debugger'
+end
+
+group :test do
+	gem 'cucumber-rails', :require => false
+	gem 'cucumber-rails-training-wheels'
+
+	gem 'database_cleaner'
+	gem 'capybara'
+	gem 'launchy'
+end
+
+
+group :production do
+  gem 'pg'
+end
 
 # Gems for bootstrap integration.
 gem 'bootstrap-sass', '~> 3.2.0'
@@ -24,18 +42,3 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
