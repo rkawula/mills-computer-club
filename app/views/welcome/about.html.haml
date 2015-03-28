@@ -16,33 +16,7 @@
                     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   %body
-    .brand Mills Computer Club
-    .address-bar 5000 MacArthur Boulevard | Oakland, CA 94613 | mcc@mills.edu
-    / Navigation
-    %nav.navbar.navbar-default{:role => "navigation"}
-      .container
-        / Brand and toggle get grouped for better mobile display
-        .navbar-header
-          %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          / navbar-brand is hidden on larger screens, but visible when the menu is collapsed
-          %a.navbar-brand{:href => root_path} Mills Computer Club
-        / Collect the nav links, forms, and other content for toggling
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          %ul.nav.navbar-nav
-            %li
-              %a{:href => root_path} Home
-            %li
-              %a{:href => about_path} About
-            %li
-              %a{:href => blog_path} Blog
-            %li
-              %a{:href => contact_path} Contact
-        / /.navbar-collapse
-      / /.container
+  
     .container
       .row
         .box
@@ -77,26 +51,31 @@
             %img.img-responsive{:alt => "", :src => "/img/pres.jpg"}
               %h3
                 Rachel Kawula
+                %br
                 %small President
           .col-sm-4.text-center
             %img.img-responsive{:alt => "", :src => "/img/vp.jpg"}
               %h3
                 Heather Myers
+                %br
                 %small Honorary Vice President
           .col-sm-4.text-center
             %img.img-responsive{:alt => "", :src => "/img/treas.jpg"}
               %h3
                 Winnie Cheung
+                %br
                 %small Treasurer
           .col-sm-4.text-center
             %img.img-responsive{:alt => "", :src => "/img/pr.jpg"}
               %h3
                 Angelica Leyva-McMurtry
+                %br
                 %small Public Relations
           .col-sm-4.text-center
             %img.img-responsive{:alt => "", :src => "/img/hist.jpg"}
               %h3
                 Allison David
+                %br
                 %small Historian
           .clearfix
     / /.container
