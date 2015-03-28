@@ -8,4 +8,6 @@ class WelcomeController < ApplicationController
   end
   def contact
   end
+  def events
+  end
 end
