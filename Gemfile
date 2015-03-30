@@ -9,7 +9,7 @@ gem 'haml'
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   gem 'sqlite3'
-  gem 'byebug'
+  gem 'debugger'
   gem 'webrick', '~> 1.3.1'
 end
 
