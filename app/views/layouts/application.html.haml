@@ -18,22 +18,24 @@
             %span.icon-bar
             %span.icon-bar
           / navbar-brand is hidden on larger screens, but visible when the menu is collapsed
-          %a.navbar-brand{:href => "/"} Mills Computer Club
+          %a.navbar-brand{:href => root_path} Mills Computer Club
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li
               %a{:href => root_path} Home
             %li
-              %a{:href => about_path} About the Club
+              %a{:href => about_path} About Us
             %li
               %a{:href => blog_path} Blog
             %li
               %a{:href => events_path} Events
             %li
-              %a{:href => contact_path} Contact
-            %li
               %a{:href => projects_path} Projects
+            %li
+              %a{:href => resources_path} Resources
+            %li
+              %a{:href => contact_path} Contact
         / /.navbar-collapse
       / /.container
     = yield
