@@ -12,4 +12,6 @@ class WelcomeController < ApplicationController
   end
   def projects
   end
+  def achievements
+  end
 end
