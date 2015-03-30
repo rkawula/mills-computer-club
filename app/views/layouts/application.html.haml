@@ -23,15 +23,15 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li
-              %a{:href => "/"} Home
+              %a{:href => root_path} Home
             %li
-              %a{:href => "/about"} About
+              %a{:href => about_path} About the Club
             %li
-              %a{:href => "/blog"} Blog
+              %a{:href => blog_path} Blog
             %li
-              %a{:href => "/events"} Events
+              %a{:href => events_path} Events
             %li
-              %a{:href => "/contact"} Contact
+              %a{:href => contact_path} Contact
         / /.navbar-collapse
       / /.container
     = yield
