@@ -8,6 +8,7 @@ MillsComputerClub::Application.routes.draw do
   match '/blog', :to => 'welcome#blog'
   match '/contact', :to => 'welcome#contact'
   match '/events', :to => 'welcome#events'
+  match '/projects', :to => 'welcome#projects'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
