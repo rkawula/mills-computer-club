@@ -9,7 +9,11 @@ gem 'haml'
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   gem 'sqlite3'
-  gem 'debugger'
+  if ("#{RUBY_VERSION}".to_i < 2)
+    gem 'debugger'
+  else
+    gem 'byebug'
+  end
   gem 'webrick', '~> 1.3.1'
 end
 
