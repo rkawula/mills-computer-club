@@ -4,7 +4,6 @@ MillsComputerClub::Application.routes.draw do
 
   # Routes for our html pages to show up.
   match '/index', :to => 'welcome#index'
-  match '/about', :to => 'welcome#about'
   match '/blog', :to => 'welcome#blog'
   match '/contact', :to => 'welcome#contact'
   match '/events', :to => 'welcome#events'
