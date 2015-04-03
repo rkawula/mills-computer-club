@@ -26,7 +26,7 @@
               %hr
                 %ol
                   %li
-                    %a{:href => resources_path + '#meetingTimes'}What times does the club meet?
+                    %a{:href => resources_path + '#meetingTimes'}When does the club meet?
                   %li
                     %a{:href => resources_path + '#events'}Where can I find a list of club events?
                   %li
@@ -39,24 +39,40 @@
                     %a{:href => resources_path + '#careers'}What kind of careers are there in computer science?
                   %li
                     %a{:href => resources_path + '#clubReqs'}I don't want to be a computer science major. Can I join the club?
+                  %li
+                    %a{:href => resources_path + '#challenges'}Where can I go to improve my programming skills?
       .row
         .box
           .col-lg-12
             %hr
               %h2.intro-text.text-center
-                Resources
+                Answers
               %hr
                 %p Don't like our answers, or are we missing a question? Email us suggestions here! (NYI link to email us)
                 %ol
                   %li
                     %a{:name => 'meetingTimes'}
-                    Times.
+                    The Mills Computer Club meets Thursdays at 4 PM in Stern 14. On weeks where there are guest speakers or workshops, we instead meet at the advertised location.
+                    %br
+                    There are many other events throughout the week or month. For more details, please visit
+                    %a{:href => events_path}our calendar!
                   %li
                     %a{:name => 'events'}
-                    Events.
+                    Our events are listed on
+                    %a{:href => events_path}our calendar,
+                    where you are encouraged to RSVP. If you have any questions about the event, or would like to suggest a presentation, please
+                    %a{:href => root_path + '#contactUs'}contact us!
                   %li
                     %a{:name => 'languageChoice'}
-                    Languages you could learn.
+                    Here are the resources endorsed by the Mills Computer Club members:
+                    %br
+                    Python ->
+                    %a{:href => 'http://learnpythonthehardway.org/book/'}Learn Python the Hard Way
+                    %br
+                    Ruby ->
+                    %a{:href => 'http://www.codecademy.com/en/tracks/ruby'}Codecademy
+                    %br
+                    More coming soon.
                   %li
                     %a{:name => 'hobbyist'}
                     You can learn on your own.
@@ -68,7 +84,11 @@
                     Careers.
                   %li
                     %a{:name => 'clubReqs'}
-                    No requirements!
+                    Of course! Our club members are mostly computer science students, but we welcome everyone -- academics and hobbyists alike. The club is perfect for interdisciplinary interests, such as business students wishing to manage technical teams, artists looking to do graphic design, and writers wanting a career in technical writing.
+                  %li
+                    %a{:name => 'challenges'}
+                    HackerRank, Project Euler, TopCoder, codingbat.
+
     / /.container
 
     / jQuery
