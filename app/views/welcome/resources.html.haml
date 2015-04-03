@@ -22,28 +22,55 @@
           .col-lg-12
             %hr
               %h2.intro-text.text-center
-                Resources
+                FAQ
               %hr
                 %ol
                   %li
-                    %a{:href => resources_path} Stuff that is clickable?
+                    %a{:href => resources_path + '#meetingTimes'}What times does the club meet?
                   %li
-                    %a{:href => resources_path} Stuff that is clickable?
+                    %a{:href => resources_path + '#events'}Where can I find a list of club events?
+                  %li
+                    %a{:href => resources_path + '#languageChoice'}What language(s) should I learn?
+                  %li
+                    %a{:href => resources_path + '#hobbyist'}Can I learn to program as a hobby?
+                  %li
+                    %a{:href => resources_path + '#interviewPrep'}How should I prepare for a technical interview?
+                  %li
+                    %a{:href => resources_path + '#careers'}What kind of careers are there in computer science?
+                  %li
+                    %a{:href => resources_path + '#clubReqs'}I don't want to be a computer science major. Can I join the club?
       .row
         .box
           .col-lg-12
             %hr
               %h2.intro-text.text-center
-                FAQ
+                Resources
               %hr
-                %p Vivamus vel urna porta, viverra turpis et, convallis ligula. Sed varius nisl nisi, sed egestas nibh accumsan sed. Proin quis dui a leo mollis fermentum vel ut elit. Aliquam aliquam condimentum tincidunt. In non lorem eget nunc tincidunt feugiat eget ut arcu. 
+                %p Don't like our answers, or are we missing a question? Email us suggestions here! (NYI link to email us)
+                %ol
+                  %li
+                    %a{:name => 'meetingTimes'}
+                    Times.
+                  %li
+                    %a{:name => 'events'}
+                    Events.
+                  %li
+                    %a{:name => 'languageChoice'}
+                    Languages you could learn.
+                  %li
+                    %a{:name => 'hobbyist'}
+                    You can learn on your own.
+                  %li
+                    %a{:name => 'interviewPrep'}
+                    Interview preparation.
+                  %li
+                    %a{:name => 'careers'}
+                    Careers.
+                  %li
+                    %a{:name => 'clubReqs'}
+                    No requirements!
     / /.container
 
-    %footer
-      .container
-        .row
-          .col-lg-12.text-center
-            %p Copyright &copy; Your Website 2014
     / jQuery
     %script{:src => "js/jquery.js"}
     / Bootstrap Core JavaScript

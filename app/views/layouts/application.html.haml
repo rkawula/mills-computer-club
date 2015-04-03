@@ -34,8 +34,13 @@
               %a{:href => achievements_path} Achievements
             %li
               %a{:href => resources_path} Resources
-            %li
-              %a{:href => contact_path} Contact
         / /.navbar-collapse
       / /.container
+ 
     = yield
+
+  %footer
+    .container
+      .row
+        .col-lg-12.text-center
+          %p Copyright &copy; Your Website 2014
