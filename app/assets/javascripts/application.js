@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap.min
+//= require moment
+//= require fullcalendar
+//= require fullcalendar/gcal
 //= require_tree .

@@ -119,12 +119,11 @@
                       %a{:href => "http://join.deathtothestockphoto.com/", :target => "_blank"} Death to the Stock Photo
                       for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.
                     %p More contact info.
-    / jQuery
-    %script{:src => "js/jquery.js"}
-    / Bootstrap Core JavaScript
-    %script{:src => "js/bootstrap.min.js"}
+
     / Script to Activate the Carousel
     :javascript
+    $(document).ready(function() {
       $('.carousel').carousel({
-          interval: 5000 //changes the speed
-      })
+        interval: 5000
+      });
+    });

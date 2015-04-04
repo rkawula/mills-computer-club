@@ -26,15 +26,15 @@ group :test do
 	gem 'launchy'
 end
 
+gem 'momentjs-rails'
+gem 'fullcalendar-rails'
+gem 'omniauth-google-oauth2'
+gem 'json'
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-
-# Gems for bootstrap integration.
-gem 'bootstrap-sass', '~> 3.2.0'
-gem 'autoprefixer-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
