@@ -1,4 +1,4 @@
 $(document).ready ->
   $('#calendar').fullCalendar({
-      
+  	
   });

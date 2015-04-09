@@ -10,4 +10,6 @@ class WelcomeController < ApplicationController
   end
   def achievements
   end
+  def authors
+  end
 end
