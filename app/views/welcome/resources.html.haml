@@ -48,7 +48,9 @@
               %h2.intro-text.text-center
                 Answers
               %hr
-                %p Don't like our answers, or are we missing a question? Email us suggestions here! (NYI link to email us)
+                %p
+                Don't like our answers, or are we missing a question?
+                %a{:href => root_path + '#contactUs'} Contact us!
                 %ol
                   %li
                     %a{:name => 'meetingTimes'}
@@ -75,18 +77,30 @@
                     More coming soon.
                   %li
                     %a{:name => 'hobbyist'}
-                    You can learn on your own.
+                    Yes! For a deeper understanding and ability to adapt to changing technology, a CS degree is invaluable. However, if you want to learn simple code to make tasks easier, learning programming as a hobby is simple. We host many introductory workshops on different topics, such as web development, in addition to encouraging students to take a few CS classes as electives, or as a minor. We also have a growing list of recommended resources for learning languages, shown above.
                   %li
                     %a{:name => 'interviewPrep'}
-                    Interview preparation.
+                    We host interview and resume workshops from companies such as Google. We also suggest
+                    %a{:href => 'http://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X/ref=sr_1_1?ie=UTF8&qid=1428701869&sr=8-1&keywords=cracking+the+coding+interview'}Cracking the Coding Interview
+                    for whiteboarding practice, and
+                    %a{:href => 'https://www.hackerrank.com/'} HackerRank
+                    for coding challenges.
                   %li
                     %a{:name => 'careers'}
-                    Careers.
+                    Outside of Software Engineering, there are also opportunities for Project Management, Technical Writing, UI/UX Design, non-profit work, etc.
                   %li
                     %a{:name => 'clubReqs'}
                     Of course! Our club members are mostly computer science students, but we welcome everyone -- academics and hobbyists alike. The club is perfect for interdisciplinary interests, such as business students wishing to manage technical teams, artists looking to do graphic design, and writers wanting a career in technical writing.
                   %li
                     %a{:name => 'challenges'}
-                    HackerRank, Project Euler, TopCoder, codingbat.
+                    %ul
+                      %li
+                        %a{:href => 'https://www.hackerrank.com/'}HackerRank
+                      %li
+                        %a{:href => 'https://projecteuler.net/'}Project Euler
+                      %li
+                        %a{:href => 'http://www.topcoder.com/'}TopCoder
+                      %li
+                        %a{:href => 'http://codingbat.com/'}CodingBat
 
     / /.container
