@@ -2,13 +2,14 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.21'
 gem 'haml'
+gem 'pg'##FUTURE-BRIGHID, THIS IS A THING YOU DID!!! DON'T FORGET!
 
+gem 'minitest'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
-  gem 'sqlite3'
   if ("#{RUBY_VERSION}".to_i < 2)
     gem 'debugger'
   else
@@ -32,7 +33,6 @@ gem 'omniauth-google-oauth2'
 gem 'json'
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
