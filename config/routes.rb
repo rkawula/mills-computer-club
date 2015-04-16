@@ -2,11 +2,6 @@ MillsComputerClub::Application.routes.draw do
 
   root to: 'welcome#index'
 
-  # Not yet in use:
-  resources :sessions, only: :index
-  match '/test_session', :to => 'sessions#new'
-  get '/auth/:provider/callback' => 'sessions#create'
-
   # Routes for our static pages to show up.
   match '/index', :to => 'welcome#index'
   match '/blog', :to => 'welcome#blog'
