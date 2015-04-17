@@ -16,3 +16,4 @@
 
 # Ignore authentication information.
 /oauth.js
+/config/initializers/omniauth.rb
