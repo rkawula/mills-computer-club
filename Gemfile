@@ -1,5 +1,5 @@
-source 'https://rubygems.org'
-
+source "https://rubygems.org"
+gem 'sinatra', '1.0'
 gem 'rails', '3.2.21'
 gem 'haml'
 
