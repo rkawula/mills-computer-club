@@ -11,16 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150414162653) do
+ActiveRecord::Schema.define(:version => 20150419054517) do
 
   create_table "users", :force => true do |t|
-    t.integer  "user_id",                        :null => false
-    t.string   "given_name"
-    t.string   "family_name",                    :null => false
     t.string   "provider"
-    t.boolean  "admin",       :default => false, :null => false
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
 end
