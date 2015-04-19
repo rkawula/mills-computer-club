@@ -1,5 +1,6 @@
 MillsComputerClub::Application.routes.draw do
 
+  # Routes for logging in and out through Google.
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
