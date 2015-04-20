@@ -24,6 +24,10 @@ group :test do
 	gem 'database_cleaner'
 	gem 'capybara'
 	gem 'launchy'
+
+  gem 'ZenTest'
+  gem 'rspec-rails', '~>2.0'
+  gem 'factory_girl_rails'
 end
 
 gem 'momentjs-rails'

@@ -6,6 +6,7 @@ MillsComputerClub::Application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
   resources :sessions, only: [:create, :destroy]
+  resources :users, only: [:index, :show, :update, :destroy]
 
   root to: 'welcome#index'
 

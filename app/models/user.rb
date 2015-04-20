@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+	attr_accessible :profile
+	
 	def self.from_omniauth(auth)
 		# Finds user from database; else, creates new entry and saves.
 		where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
