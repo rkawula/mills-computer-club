@@ -39,6 +39,7 @@
       .row
         .box
           .col-lg-12
+            = flash[:notice]
             %div
               - if current_user
                 Signed in as
