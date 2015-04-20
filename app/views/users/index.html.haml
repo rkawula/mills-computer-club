@@ -25,6 +25,11 @@
                 Our
                 %strong members
               %hr
-          .col-md-6
-            %p 
-          .clearfix
+          %table#users
+            %thead
+              %tr
+                %th User name
+              %tbody
+                - @users.each do |user|
+                  %tr
+                    %td= link_to user.name, user_path(user.id)
