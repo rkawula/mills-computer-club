@@ -22,9 +22,7 @@
           .col-lg-12
             %hr
               %h2.intro-text.text-center
-                Our
-                %strong members
-              %hr
-          .col-md-6
-            %p 
-          .clearfix
+                %strong= @user.name
+            %hr
+              %p= @user.profile
+              
