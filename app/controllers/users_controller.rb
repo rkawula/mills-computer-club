@@ -13,4 +13,13 @@ class UsersController < ApplicationController
 		end
 
 	end
+
+	def profile
+
+		unless current_user
+			flash[:notice] = "Please log in to edit your profile."
+			redirect_to users_path
+		end
+
+	end
 end

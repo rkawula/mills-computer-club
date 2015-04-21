@@ -5,8 +5,10 @@ MillsComputerClub::Application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
+  get '/users/profile', to: 'users#profile'
+
   resources :sessions, only: [:create, :destroy]
-  resources :users, only: [:index, :show, :update, :destroy]
+  resources :users, only: [:index, :show, :destroy]
 
   root to: 'welcome#index'
 

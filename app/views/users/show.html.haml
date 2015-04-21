@@ -25,4 +25,5 @@
                 %strong= @user.name
             %hr
               %p= @user.profile
-              
+            - if current_user && current_user.id == @user.id
+              = link_to 'Edit profile', users_profile_path
