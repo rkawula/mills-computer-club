@@ -43,7 +43,7 @@ describe UsersController do
 
 		describe 'if user is not logged in' do
 			before :each do
-				get :profile, {:current_user => nil}
+				get :profile
 			end
 
 			it 'should flash an error message' do
@@ -55,18 +55,6 @@ describe UsersController do
 			end
 		end
 
-		describe 'if user is logged in' do
-			before :each do
-				User.stub(:current_user).and_return(nil)
-				get :profile
-			end
-			it 'should not show an error if the user is logged in' do
-				flash[:notice].should be_nil
-			end
-			it 'should render the Profile template' do
-				response.should render_template('profile')
-			end
-		end
 
 	end
 

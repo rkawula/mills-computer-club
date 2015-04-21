@@ -7,6 +7,8 @@ MillsComputerClub::Application.routes.draw do
 
   get '/users/profile', to: 'users#profile'
 
+  post '/users/profile', to: 'users#edit_profile', as: 'edit_profile'
+
   resources :sessions, only: [:create, :destroy]
   resources :users, only: [:index, :show, :destroy]
 

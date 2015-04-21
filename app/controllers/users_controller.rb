@@ -21,5 +21,20 @@ class UsersController < ApplicationController
 			redirect_to users_path
 		end
 
+		@user = current_user
+	end
+
+	def edit_profile
+
+		@user = User.find_by_id(current_user[:id])
+
+		if params[:user][:profile] != ""
+			@user.update_attributes(params[:user])
+			flash[:notice] = "Saved changes."
+			render 'show'
+		else
+			flash[:notice] = "Info not updated."
+			redirect_to users_path
+		end
 	end
 end
