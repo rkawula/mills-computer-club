@@ -6,10 +6,14 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :oauth_token
       t.datetime :oauth_expires_at
-
       t.string :profile
+      t.boolean :admin, null: false, default: false
 
       t.timestamps
     end
+  end
+
+  def down
+    drop_table :users
   end
 end
