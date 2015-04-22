@@ -4,6 +4,7 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
   %body
     .brand Mills Computer Club
     .address-bar 5000 MacArthur Boulevard | Oakland, CA 94613 | mcc@mills.edu
@@ -21,7 +22,7 @@
           %a.navbar-brand{:href => root_path} Mills Computer Club
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          %ul.nav.navbar-nav
+          %ul.nav.navbar-nav.mills-nav
             %li
               %a{:href => root_path} Home
             %li
@@ -38,18 +39,17 @@
               %a{:href => resources_path} Resources
         / /.navbar-collapse
       / /.container
-      .row
-        .box
-          .col-lg-12
-            = flash[:notice]
-            %div
-              - if current_user
-                Signed in as
-                = succeed "!" do
-                  %strong= current_user.name
-                = link_to "Sign out", signout_path, id: "sign_out"
-              - else
-                = link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" 
+    .row
+      .col-lg-12
+        = flash[:notice]
+        %button.btn.btn-default
+          - if current_user
+            Signed in as
+            = succeed "!" do
+              %strong= current_user.name
+            = link_to "Sign out", signout_path, id: "sign_out"
+          - else
+            = link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" 
     = yield
 
   %footer
