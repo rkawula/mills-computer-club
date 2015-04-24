@@ -6,6 +6,17 @@
     = csrf_meta_tags
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
   %body
+  .row
+    .col-lg-12
+      = flash[:notice]
+      %button.btn-google
+        - if current_user
+          Signed in as
+          = succeed "!" do
+            %strong= current_user.name
+            = link_to "Sign out", signout_path, id:"sign_out"
+        - else
+          = link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" 
     .brand Mills Computer Club
     .address-bar 5000 MacArthur Boulevard | Oakland, CA 94613 | mcc@mills.edu
     / Navigation
@@ -24,8 +35,6 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.mills-nav
             %li
-              %a{:href => root_path} Home
-            %li
               %a{:href => blog_path} Blog
             %li
               %a{:href => events_path} Events
@@ -39,17 +48,6 @@
               %a{:href => resources_path} Resources
         / /.navbar-collapse
       / /.container
-    .row
-      .col-lg-12
-        = flash[:notice]
-        %button.btn.btn-default
-          - if current_user
-            Signed in as
-            = succeed "!" do
-              %strong= current_user.name
-            = link_to "Sign out", signout_path, id: "sign_out"
-          - else
-            = link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" 
     = yield
 
   %footer

@@ -6563,4 +6563,7 @@ button.close {
     display: none !important;
   }
 }
+.btn-google{
+  float:right;
+}
 /*# sourceMappingURL=bootstrap.css.map */
