@@ -20,14 +20,9 @@ ActiveRecord::Schema.define(:version => 20150419054517) do
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
     t.string   "profile"
-<<<<<<< Updated upstream
     t.boolean  "admin",            :default => false, :null => false
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
-=======
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
->>>>>>> Stashed changes
   end
 
 end
