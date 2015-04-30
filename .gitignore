@@ -18,4 +18,3 @@
 /oauth.js
 /config/initializers/omniauth.rb
 /app/assets/javascripts/calendar.js.coffee
-app/assets/javascripts/calendar.js.coffee
