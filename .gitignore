@@ -13,3 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+
+# Ignore authentication information.
+/oauth.js
+/config/initializers/omniauth.rb
+/app/assets/javascripts/calendar.js.coffee
