@@ -12,4 +12,6 @@ class WelcomeController < ApplicationController
     end
     def authors
     end
+    def media
+    end
 end
