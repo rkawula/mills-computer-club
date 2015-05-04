@@ -23,6 +23,7 @@ MillsComputerClub::Application.routes.draw do
   match '/projects', :to => 'welcome#projects'
   match '/resources', :to => 'welcome#resources'
   match '/achievements', :to => 'welcome#achievements'
+  match '/media', :to => 'welcome#media'
   match '/authors', :to => 'welcome#authors'
 
 
