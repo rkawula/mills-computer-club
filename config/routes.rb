@@ -11,7 +11,7 @@ MillsComputerClub::Application.routes.draw do
 
   resources :sessions, only: [:create, :destroy]
   resources :users, only: [:index, :show, :destroy]
-    resources :posts
+  	resources :posts
   
 
   root to: 'welcome#index'
@@ -20,9 +20,7 @@ MillsComputerClub::Application.routes.draw do
   match '/index', :to => 'welcome#index'
   match '/blog', :to => 'welcome#blog'
   match '/events', :to => 'welcome#events'
-  match '/projects', :to => 'welcome#projects'
   match '/resources', :to => 'welcome#resources'
-  match '/achievements', :to => 'welcome#achievements'
   match '/media', :to => 'welcome#media'
   match '/authors', :to => 'welcome#authors'
 
