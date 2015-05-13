@@ -14,7 +14,7 @@ describe UsersController do
 
 		describe 'after valid user' do
 			before :each do
-				User.stub(:find_by_id).and_return(@fake_user)
+				User.stub(:find_by_id)..with('1').and_return(@fake_user)
 				get :show, {:id => 1}
 			end
 			it 'should render the Show template' do

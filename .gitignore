@@ -13,8 +13,3 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
-
-# Ignore authentication information.
-/oauth.js
-/app/assets/javascripts/calendar.js.coffee
