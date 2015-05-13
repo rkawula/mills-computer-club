@@ -1,8 +1,12 @@
 $(document).ready ->
+
+  var gID = <%= ENV['GCALENDAR_ID'] %>;
+  var gKey = <%= ENV['GCALENDAR_KEY'] %>;
+
   $('#calendar').fullCalendar({
-  	googleCalendarApiKey: ENV['GCALENDAR_ID'],
+  	googleCalendarApiKey: gID,
   	events: {
-  		googleCalendarId: ENV['GCALENDAR_KEY']
+  		googleCalendarId: gKey
   	}
   });
   
