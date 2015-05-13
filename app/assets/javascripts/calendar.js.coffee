@@ -5,3 +5,4 @@ $(document).ready ->
   		googleCalendarId: ENV['GCALENDAR_KEY']
   	}
   });
+  
