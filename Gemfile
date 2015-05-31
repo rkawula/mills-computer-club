@@ -7,8 +7,6 @@ gem 'annotate', '~>2.4.1.beta'
 # Handles ENV variables.
 gem 'figaro'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
@@ -22,12 +20,12 @@ group :development, :test do
 end
 
 group :test do
-	gem 'cucumber-rails', :require => false
-	gem 'cucumber-rails-training-wheels'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
 
-	gem 'database_cleaner'
-	gem 'capybara'
-	gem 'launchy'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
 
   gem 'ZenTest'
   gem 'rspec-rails', '~>2.0'
