@@ -59,9 +59,9 @@ module MillsComputerClub
     # This helps deploy on heroku
     config.assets.initialize_on_precompile = false
     # This enables vendor CSS files:
-    #config.sass.load_paths << File.expand_path('mills-computer-club/vendor/assets/stylesheets/')
+    # config.sass.load_paths << File.expand_path('mills-computer-club/vendor/assets/stylesheets/')
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = '1.1'
   end
 end
