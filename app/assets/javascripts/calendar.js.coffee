@@ -6,4 +6,3 @@ $(document).ready ->
   		googleCalendarId: 'i3dlsglfhl4238la2vumg6lqek@group.calendar.google.com'
   	}
   });
-  
