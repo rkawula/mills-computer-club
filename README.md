@@ -19,4 +19,10 @@ Rails v3.4 (TODO migrate to v4+)
 Troubleshooting/Known errors:
 
 "no such file to load -- sqlite3/sqlite3_native" (LoadError)
-	+ Resolution in progress
+	+ gem uninstall sqlite3
+	+ gem install sqlite3 (possibly unneeded?)
+	+ bundle install
+
+ExecJS (Windows error)
+	+ Easiest way to fix is to install node.js @ nodejs.org
+	+ Add Node to your path (if it doesn't automaticallly)
