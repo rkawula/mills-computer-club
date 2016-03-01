@@ -1,106 +1,87 @@
-!!!
-%html{:lang => "en"}
-  %head
-    %meta{:charset => "utf-8"}
-      %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
-        %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
-          %meta{:content => "", :name => "description"}
-            %meta{:content => "", :name => "author"}
-              %title Resources - Mills College Computer Club
-              / Fonts
-              %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}
-                %link{:href => "http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic", :rel => "stylesheet", :type => "text/css"}
-                  / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-                  / WARNING: Respond.js doesn't work if you view the page via file://
-                  /[if lt IE 9]
-                    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-                    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  %body
-    .container
-      .row
-        .box
-          .col-lg-12
+%body
+  .container
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              FAQ
             %hr
-              %h2.intro-text.text-center
-                FAQ
-              %hr
-                %ol
-                  %li
-                    %a{:href => resources_path + '#meetingTimes'}When does the club meet?
-                  %li
-                    %a{:href => resources_path + '#events'}Where can I find a list of club events?
-                  %li
-                    %a{:href => resources_path + '#languageChoice'}What language(s) should I learn?
-                  %li
-                    %a{:href => resources_path + '#hobbyist'}Can I learn to program as a hobby?
-                  %li
-                    %a{:href => resources_path + '#interviewPrep'}How should I prepare for a technical interview?
-                  %li
-                    %a{:href => resources_path + '#careers'}What kind of careers are there in computer science?
-                  %li
-                    %a{:href => resources_path + '#clubReqs'}I don't want to be a computer science major. Can I join the club?
-                  %li
-                    %a{:href => resources_path + '#challenges'}Where can I go to improve my programming skills?
-      .row
-        .box
-          .col-lg-12
+              %ol
+                %li
+                  %a{:href => resources_path + '#meetingTimes'}When does the club meet?
+                %li
+                  %a{:href => resources_path + '#events'}Where can I find a list of club events?
+                %li
+                  %a{:href => resources_path + '#languageChoice'}What language(s) should I learn?
+                %li
+                  %a{:href => resources_path + '#hobbyist'}Can I learn to program as a hobby?
+                %li
+                  %a{:href => resources_path + '#interviewPrep'}How should I prepare for a technical interview?
+                %li
+                  %a{:href => resources_path + '#careers'}What kind of careers are there in computer science?
+                %li
+                  %a{:href => resources_path + '#clubReqs'}I don't want to be a computer science major. Can I join the club?
+                %li
+                  %a{:href => resources_path + '#challenges'}Where can I go to improve my programming skills?
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              Answers
             %hr
-              %h2.intro-text.text-center
-                Answers
-              %hr
-                %p
-                Don't like our answers, or are we missing a question?
-                %a{:href => root_path + '#contactUs'} Contact us!
-                %ol
-                  %li
-                    %a{:name => 'meetingTimes'}
-                    The Mills Computer Club meets Thursdays at 4 PM in Stern 14. On weeks where there are guest speakers or workshops, we instead meet at the advertised location.
-                    %br
-                    There are many other events throughout the week or month. For more details, please visit
-                    %a{:href => events_path}our calendar!
-                  %li
-                    %a{:name => 'events'}
-                    Our events are listed on
-                    %a{:href => events_path}our calendar,
-                    where you are encouraged to RSVP. If you have any questions about the event, or would like to suggest a presentation, please
-                    %a{:href => root_path + '#contactUs'}contact us!
-                  %li
-                    %a{:name => 'languageChoice'}
-                    Here are the resources endorsed by the Mills Computer Club members:
-                    %br
-                    Python ->
-                    %a{:href => 'http://learnpythonthehardway.org/book/'}Learn Python the Hard Way
-                    %br
-                    Ruby ->
-                    %a{:href => 'http://www.codecademy.com/en/tracks/ruby'}Codecademy
-                    %br
-                    More coming soon.
-                  %li
-                    %a{:name => 'hobbyist'}
-                    Yes! For a deeper understanding and ability to adapt to changing technology, a CS degree is invaluable. However, if you want to learn simple code to make tasks easier, learning programming as a hobby is simple. We host many introductory workshops on different topics, such as web development, in addition to encouraging students to take a few CS classes as electives, or as a minor. We also have a growing list of recommended resources for learning languages, shown above.
-                  %li
-                    %a{:name => 'interviewPrep'}
-                    We host interview and resume workshops from companies such as Google. We also suggest
-                    %a{:href => 'http://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X/ref=sr_1_1?ie=UTF8&qid=1428701869&sr=8-1&keywords=cracking+the+coding+interview'}Cracking the Coding Interview
-                    for whiteboarding practice, and
-                    %a{:href => 'https://www.hackerrank.com/'} HackerRank
-                    for coding challenges.
-                  %li
-                    %a{:name => 'careers'}
-                    Outside of Software Engineering, there are also opportunities for Project Management, Technical Writing, UI/UX Design, non-profit work, etc.
-                  %li
-                    %a{:name => 'clubReqs'}
-                    Of course! Our club members are mostly computer science students, but we welcome everyone -- academics and hobbyists alike. The club is perfect for interdisciplinary interests, such as business students wishing to manage technical teams, artists looking to do graphic design, and writers wanting a career in technical writing.
-                  %li
-                    %a{:name => 'challenges'}
-                    %ul
-                      %li
-                        %a{:href => 'https://www.hackerrank.com/'}HackerRank
-                      %li
-                        %a{:href => 'https://projecteuler.net/'}Project Euler
-                      %li
-                        %a{:href => 'http://www.topcoder.com/'}TopCoder
-                      %li
-                        %a{:href => 'http://codingbat.com/'}CodingBat
-
-    / /.container
+              %p
+              Don't like our answers, or are we missing a question?
+              %a{:href => root_path + '#contactUs'} Contact us!
+              %ol
+                %li
+                  %a{:name => 'meetingTimes'}
+                  The Mills Computer Club meets Thursdays at 4 PM in Stern 14. On weeks where there are guest speakers or workshops, we instead meet at the advertised location.
+                  %br
+                  There are many other events throughout the week or month. For more details, please visit
+                  %a{:href => events_path}our calendar!
+                %li
+                  %a{:name => 'events'}
+                  Our events are listed on
+                  %a{:href => events_path}our calendar,
+                  where you are encouraged to RSVP. If you have any questions about the event, or would like to suggest a presentation, please
+                  %a{:href => root_path + '#contactUs'}contact us!
+                %li
+                  %a{:name => 'languageChoice'}
+                  Here are the resources endorsed by the Mills Computer Club members:
+                  %br
+                  Python ->
+                  %a{:href => 'http://learnpythonthehardway.org/book/'}Learn Python the Hard Way
+                  %br
+                  Ruby ->
+                  %a{:href => 'http://www.codecademy.com/en/tracks/ruby'}Codecademy
+                  %br
+                  More coming soon.
+                %li
+                  %a{:name => 'hobbyist'}
+                  Yes! For a deeper understanding and ability to adapt to changing technology, a CS degree is invaluable. However, if you want to learn simple code to make tasks easier, learning programming as a hobby is simple. We host many introductory workshops on different topics, such as web development, in addition to encouraging students to take a few CS classes as electives, or as a minor. We also have a growing list of recommended resources for learning languages, shown above.
+                %li
+                  %a{:name => 'interviewPrep'}
+                  We host interview and resume workshops from companies such as Google. We also suggest
+                  %a{:href => 'http://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X/ref=sr_1_1?ie=UTF8&qid=1428701869&sr=8-1&keywords=cracking+the+coding+interview'}Cracking the Coding Interview
+                  for whiteboarding practice, and
+                  %a{:href => 'https://www.hackerrank.com/'} HackerRank
+                  for coding challenges.
+                %li
+                  %a{:name => 'careers'}
+                  Outside of Software Engineering, there are also opportunities for Project Management, Technical Writing, UI/UX Design, non-profit work, etc.
+                %li
+                  %a{:name => 'clubReqs'}
+                  Of course! Our club members are mostly computer science students, but we welcome everyone -- academics and hobbyists alike. The club is perfect for interdisciplinary interests, such as business students wishing to manage technical teams, artists looking to do graphic design, and writers wanting a career in technical writing.
+                %li
+                  %a{:name => 'challenges'}
+                  %ul
+                    %li
+                      %a{:href => 'https://www.hackerrank.com/'}HackerRank
+                    %li
+                      %a{:href => 'https://projecteuler.net/'}Project Euler
+                    %li
+                      %a{:href => 'http://www.topcoder.com/'}TopCoder
+                    %li
+                      %a{:href => 'http://codingbat.com/'}CodingBat

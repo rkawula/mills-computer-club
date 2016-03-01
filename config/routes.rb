@@ -11,7 +11,8 @@ MillsComputerClub::Application.routes.draw do
 
   resources :sessions, only: [:create, :destroy]
   resources :users, only: [:index, :show, :destroy]
-  	resources :posts
+  
+  resources :post, only: [:index, :show]
   
 
   root to: 'welcome#index'

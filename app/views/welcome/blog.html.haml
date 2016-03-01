@@ -1,91 +1,73 @@
-!!!
-%html{:lang => "en"}
-  %head
-    %meta{:charset => "utf-8"}
-      %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
-        %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
-          %meta{:content => "", :name => "description"}
-            %meta{:content => "", :name => "author"}
-              %title Blog - Mills College Computer Club
-              / Fonts
-              %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}
-                %link{:href => "http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic", :rel => "stylesheet", :type => "text/css"}
-                  / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-                  / WARNING: Respond.js doesn't work if you view the page via file://
-                  /[if lt IE 9]
-                    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-                    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  %body
-    .container
-      .row
-        .box
-          .col-lg-12
+%body
+  .container
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              Club
+              %strong blog
             %hr
-              %h2.intro-text.text-center
-                Club
-                %strong blog
-              %hr
-          .col-lg-12.text-center
-            %img.img-responsive.img-border.img-full{:alt => "", :src => "img/blog-1.jpg"}
-              %h2
-                End of Year Celebration 
-                %br
-                  %small May 05, 2015
-              %p 
-              End of year celebration party will be held on May 07, 2015 from 5-8 PM! Everyone is invited. It will be a potluck, but don't stress if you can't bring food. 
-              
-              %br/
-              Address: 4362 Steele Street, Oakland CA, 94619
-              %br/
-              %a.btn.btn-default.btn-lg{:href => "#"} Read More
-              %hr
-          .col-lg-12.text-center
-            %img.img-responsive.img-border.img-full{:alt => "", :src => "img/blog-2.jpg"}
-              %h2
-                New Officer
-                %br
-                  %small May 04, 2015
-              %p 
-              MCC:
-              %br/
-              President: Angelica Leyva-McMurtry
-              %br/
-              VP: Gloriane Tran
-              %br/
-              Publicity: Allison David
-              %br/
-              Treasurer: Elise Richards
-              %br/
-              Historian: Deana Bui
-              %br/
-              Website Admin: Brighid Wilhite, Ruellia Zhang
-              %br/
-              MICE:
-              %br/
-              President: Heather Myers 
-              %br/
-              Treasurer: Ashley Ongsarte
-              %br/
-              Website Admin: Rachel Kawula
-              %br/
-              %a.btn.btn-default.btn-lg{:href => "#"} Read More
-              %hr
-          .col-lg-12.text-center
-            %img.img-responsive.img-border.img-full{:alt => "", :src => "img/blog-3.jpg"}
-              %h2
-                Grace Hopper
-                %br
-                  %small May 02, 2015
-              %p 2015 Grace Hopper Celebration of Women in Computing will be held October 14 – 16 in Houston, Texas.
-              "Started in 1994, GHC is now the world’s largest gathering of women technologists. In 2013, GHC hosted over 4,750 attendees from 53 countries including 1,900 students from over 400 academic institutions and 2,850 professionals from industry, government and academia.   The conference features keynotes by prominent women in technology, career workshops, and technical tracks from leading researchers and the best of ACM SIGSOFT & SIGGRAPH.  Meet the women who are transforming technology at the Grace Hopper Celebration."
-              %br/
+        .col-lg-12.text-center
+          %img.img-responsive.img-border.img-full{:alt => "", :src => "img/blog-1.jpg"}
+            %h2
+              End of Year Celebration 
+              %br
+                %small May 05, 2015
+            %p 
+            End of year celebration party will be held on May 07, 2015 from 5-8 PM! Everyone is invited. It will be a potluck, but don't stress if you can't bring food. 
+            
+            %br/
+            Address: 4362 Steele Street, Oakland CA, 94619
+            %br/
+            %a.btn.btn-default.btn-lg{:href => "#"} Read More
+            %hr
+        .col-lg-12.text-center
+          %img.img-responsive.img-border.img-full{:alt => "", :src => "img/blog-2.jpg"}
+            %h2
+              New Officer
+              %br
+                %small May 04, 2015
+            %p 
+            MCC:
+            %br/
+            President: Angelica Leyva-McMurtry
+            %br/
+            VP: Gloriane Tran
+            %br/
+            Publicity: Allison David
+            %br/
+            Treasurer: Elise Richards
+            %br/
+            Historian: Deana Bui
+            %br/
+            Website Admin: Brighid Wilhite, Ruellia Zhang
+            %br/
+            MICE:
+            %br/
+            President: Heather Myers 
+            %br/
+            Treasurer: Ashley Ongsarte
+            %br/
+            Website Admin: Rachel Kawula
+            %br/
+            %a.btn.btn-default.btn-lg{:href => "#"} Read More
+            %hr
+        .col-lg-12.text-center
+          %img.img-responsive.img-border.img-full{:alt => "", :src => "img/blog-3.jpg"}
+            %h2
+              Grace Hopper
+              %br
+                %small May 02, 2015
+            %p 2015 Grace Hopper Celebration of Women in Computing will be held October 14 – 16 in Houston, Texas.
+            "Started in 1994, GHC is now the world’s largest gathering of women technologists. In 2013, GHC hosted over 4,750 attendees from 53 countries including 1,900 students from over 400 academic institutions and 2,850 professionals from industry, government and academia.   The conference features keynotes by prominent women in technology, career workshops, and technical tracks from leading researchers and the best of ACM SIGSOFT & SIGGRAPH.  Meet the women who are transforming technology at the Grace Hopper Celebration."
+            %br/
 
-              %a.btn.btn-default.btn-lg{:href => "#"} Read More
-              %hr
-          .col-lg-12.text-center
-            %ul.pager
-              %li.previous
-                %a{:href => "#"} &larr; Older
-              %li.next
-                %a{:href => "#"} Newer &rarr;
-    / /.container
+            %a.btn.btn-default.btn-lg{:href => "#"} Read More
+            %hr
+        .col-lg-12.text-center
+          %ul.pager
+            %li.previous
+              %a{:href => "#"} &larr; Older
+            %li.next
+              %a{:href => "#"} Newer &rarr;
