@@ -26,3 +26,6 @@ Troubleshooting/Known errors:
 ExecJS (Windows error)
 	+ Easiest way to fix is to install node.js @ nodejs.org
 	+ Add Node to your path (if it doesn't automaticallly)
+
+
+Features NYI are on our Trello.
