@@ -1,6 +1,10 @@
 class PostController < ApplicationController
 
 	def index
-		# index
+		@posts = Post.limit(5)
+	end
+
+	def show
+
 	end
 end
