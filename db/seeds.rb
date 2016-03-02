@@ -37,3 +37,56 @@ posts = [
 posts.each do |p|
   Post.create!(p)
 end
+
+
+officers = [
+	{ name: "Angelica McMurtry",
+	  title: "President",
+	  img_url: "/img/intro-pic.jpg",
+	  undergrad: true
+	  },
+	  	{ name: "Gloriane Tran",
+	  title: "Vice President",
+	  img_url: "/img/intro-pic.jpg",
+	  undergrad: true
+	  },
+	  	{ name: "Elise Richards",
+	  title: "Treasurer",
+	  img_url: "/img/intro-pic.jpg",
+	  undergrad: true
+	  },
+	  	{ name: "Allison David",
+	  title: "Publicity",
+	  img_url: "/img/intro-pic.jpg",
+	  undergrad: true
+	  },
+	  	{ name: "Deana Bui",
+	  title: "Historian",
+	  img_url: "/img/intro-pic.jpg",
+	  undergrad: true
+	  },
+	  { name: "Ruellia Zhang",
+	  title: "President",
+	  img_url: "/img/intro-pic.jpg",
+	  undergrad: true
+	  },
+	  { name: "Heather Myers",
+	  title: "President",
+	  img_url: "/img/heather.jpg",
+	  undergrad: false
+	  },
+	  { name: "Ashley Ongsarte",
+	  title: "Treasurer",
+	  img_url: "/img/intro-pic.jpg",
+	  undergrad: false
+	  },
+	  { name: "Rachel Kawula",
+	  title: "Website Admin",
+	  img_url: "/img/rachel.jpg",
+	  undergrad: false
+	  }
+]
+
+officers.each do |o|
+	Officer.create! o
+end
