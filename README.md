@@ -27,5 +27,9 @@ ExecJS (Windows error)
 	+ Easiest way to fix is to install node.js @ nodejs.org
 	+ Add Node to your path (if it doesn't automaticallly)
 
+"Permission denied" error when trying to run rake db:drop
+	+ Caused because the database is possibly in use by running programs
+	+ Close all console windows/processes using rails
+	+ Reopen a console window and try again
 
 Features NYI are on our Trello.

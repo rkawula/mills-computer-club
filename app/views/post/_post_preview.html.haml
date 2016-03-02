@@ -1,11 +1,13 @@
-.col-lg-12.text-center
-  %img.img-responsive.img-border.img-full.img-rounded{:alt => "", :src => "img/blog-1.jpg"}
+.col-lg-12
+  - if post.img_url
+    %img.img-responsive.img-border.img-full.img-rounded{:alt => "", src: post.img_url}
+  .text-center
     %h2
       #{post.title}
       %br
         %small #{post.created_at}
-    %p
-    #{post.contents}
-    %br
-    %a.btn.btn-default.btn-lg{href: post_path(post)} Read More
-    %hr
+  %p
+  #{post.contents}
+  %br
+  %a.btn.btn-default.btn-lg{href: post_path(post)} Read More
+  %hr

@@ -5,15 +5,43 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-users = [name: 'Some awesome person']
-users.each do |u|
-  User.create!(u)
-end
 
-posts = [{title: 'This is a story about how my life got flipped-turned upside down', contents: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum fringilla aliquet. Aliquam consequat ut sem eget egestas. Nunc finibus pharetra sem, at posuere ante vestibulum eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt ante sit amet euismod pulvinar. Aliquam a tristique purus. \nDonec at dapibus libero, sit amet consectetur eros. Integer ac dignissim mauris, vel ultrices mauris. Integer quis porttitor massa. Pellentesque non varius felis. Nunc imperdiet rhoncus dictum. Cras eu odio vel neque sollicitudin facilisis eu a urna. Quisque volutpat, nibh a dictum mollis, ipsum sem sagittis diam, id porta orci risus sit amet nulla. Suspendisse pellentesque mattis magna ut sollicitudin. Nunc imperdiet est lectus, non laoreet augue suscipit at. Phasellus tortor dui, euismod eget convallis id, varius sed massa.', user_id: 1}, {title: 'Three Rings for the Elven kings under the sky', contents: '"Seven for the Dwarf-lords in their halls of stone,\nNine for Mortal Men doomed to die,\nOne for the Dark Lord on his dark throne\nIn the Land of Mordor where the Shadows lie.\nOne Ring to rule them all, One Ring to find them,\nOne Ring to bring them all and in the darkness bind them\nIn the Land of Mordor where the Shadows lie."\n\n--J.R.R. Tolkein', user_id: 1}]
+
+posts = [
+	{   title: 'End of Year Celebration',
+		contents: "End of year celebration party will be held on May 07, 2015 from 5-8 PM! Everyone is invited. It will be a potluck, but don't stress if you can't bring food.
+
+
+
+
+
+
+
+
+
+		Address: 4362 Steele Street, Oakland CA, 94619",
+		user_id: 1,
+		img_url: 'img/blog-1.jpg' },
+	{   title: 'New Officers',
+	    contents: "MCC:
+	    President: Angelica Leyva-McMurtry
+	    VP: Gloriane Tran
+	    Publicity: Allison David
+	    Treasurer: Elise Richards
+	    Historian: Deana Bui
+	    Website Admin: Brighid Wilhite, Ruellia Zhang
+	    MICE:
+	    President: Heather Myers
+	    Treasurer: Ashley Ongsarte
+	    Website Admin: Rachel Kawula",
+		user_id: 1,
+		img_url: 'img/blog-2.jpg' },
+	{   title:  "Grace Hopper",
+		contents: "2015 Grace Hopper Celebration of Women in Computing will be held October 14 – 16 in Houston, Texas.
+            \"Started in 1994, GHC is now the world’s largest gathering of women technologists. In 2013, GHC hosted over 4,750 attendees from 53 countries including 1,900 students from over 400 academic institutions and 2,850 professionals from industry, government and academia.   The conference features keynotes by prominent women in technology, career workshops, and technical tracks from leading researchers and the best of ACM SIGSOFT & SIGGRAPH.  Meet the women who are transforming technology at the Grace Hopper Celebration.\"",
+        img_url: 'img/blog-3.jpg'
+    }
+	]
 posts.each do |p|
   Post.create!(p)
 end
-
-Resource.create!(name:"meetingtimes", question: "When does the club meet?", answer: "The Mills Computer Club meets Thursdays at 4 PM in Stern 14. On weeks where there are guest speakers or workshops, we instead meet at the advertised location.
-There are many other events throughout the week or month. For more details, please visit our calendar!", url:"/events")
