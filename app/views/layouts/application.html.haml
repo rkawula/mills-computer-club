@@ -1,6 +1,8 @@
 !!!
 %html{:lang => "en"}
   %head
+    = stylesheet_link_tag 'application', "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    = stylesheet_link_tag 'application', "http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -11,15 +13,11 @@
           %meta{:content => "", :name => "description"}
             %meta{:content => "", :name => "author"}
               %title Mills Computer Club
-              / Fonts
-              %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}
-                %link{:href => "http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic", :rel => "stylesheet", :type => "text/css"}
-                  / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-                  / WARNING: Respond.js doesn't work if you view the page via file://
-                  /[if lt IE 9]
-                    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-                    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+              %script{:crossorigin => "anonymous", :integrity => "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
+              %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :integrity => "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", :rel => "stylesheet"}
   %body
+    = stylesheet_link_tag 'application', "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    = stylesheet_link_tag 'application', "http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
     .row
       .col-lg-12
         = flash[:notice]
@@ -52,16 +50,27 @@
                 %a{:href => root_path} Home          
               %li
                 %a{:href => post_index_path} Blog
-              %li
-                %a{:href => events_path} Events
-              %li
-                %a{:href => users_path} Members
-              %li
-                %a{:href => resources_path} Resources
-              %li
-                %a{:href => media_path} Media
-              %li
-                %a{:href => announcements_path} Announcements
+              %li.dropdown
+                %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  Activities
+                  %span.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => events_path} Events
+                  %li
+                    %a{:href => hackathon_index_path} HackAThon
+              %li.dropdown
+                %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  Resources
+                  %span.caret
+                %ul.dropdown-menu
+                  %li 
+                    %a{:href => resources_path} FAQ
+                  %li
+                    %a{:href => media_path} Media
+                  %li
+                    %a{:href => users_path} Members
+
       = yield
 
     %footer

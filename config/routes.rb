@@ -14,7 +14,7 @@ MillsComputerClub::Application.routes.draw do
   
   resources :post, only: [:index, :show]
   
-  resources :announcements
+  resources :hackathon, only: [:index]
   root to: 'welcome#index'
 
   # Routes for our static pages to show up.
