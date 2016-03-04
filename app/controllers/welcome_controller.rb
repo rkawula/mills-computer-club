@@ -5,8 +5,6 @@ class WelcomeController < ApplicationController
         @mice_officers = Officer.where undergrad: false
     end
 
-    def blog
-    end
     def events
     end
     def authors

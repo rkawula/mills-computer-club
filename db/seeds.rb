@@ -14,7 +14,7 @@ posts = [
 		Address: 4362 Steele Street, Oakland CA, 94619
 		",
 		user_id: 1,
-		img_url: 'img/blog' },
+		img_url: 'img/blog-1.jpg' },
 	{   title: 'New Officers',
 	    contents: "MCC:
 	    President: Angelica Leyva-McMurtry
@@ -28,10 +28,12 @@ posts = [
 	    President: Heather Myers
 	    Treasurer: Ashley Ongsarte
 	    Website Admin: Rachel Kawula",
-		user_id: 1 },
+		user_id: 1,
+		img_url: 'img/blog-2.jpg' },
 	{   title:  "Grace Hopper",
 		contents: "2015 Grace Hopper Celebration of Women in Computing will be held October 14 – 16 in Houston, Texas.
-            \"Started in 1994, GHC is now the world’s largest gathering of women technologists. In 2013, GHC hosted over 4,750 attendees from 53 countries including 1,900 students from over 400 academic institutions and 2,850 professionals from industry, government and academia.   The conference features keynotes by prominent women in technology, career workshops, and technical tracks from leading researchers and the best of ACM SIGSOFT & SIGGRAPH.  Meet the women who are transforming technology at the Grace Hopper Celebration.\""
+            \"Started in 1994, GHC is now the world’s largest gathering of women technologists. In 2013, GHC hosted over 4,750 attendees from 53 countries including 1,900 students from over 400 academic institutions and 2,850 professionals from industry, government and academia.   The conference features keynotes by prominent women in technology, career workshops, and technical tracks from leading researchers and the best of ACM SIGSOFT & SIGGRAPH.  Meet the women who are transforming technology at the Grace Hopper Celebration.\"",
+            img_url: 'img/blog-3.jpg'
     }
 	]
 posts.each do |p|

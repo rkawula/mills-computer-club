@@ -10,7 +10,7 @@
             %hr
         .col-lg-12
           - if @post.img_url
-            %img.img-responsive.img-border.img-full.img-rounded{:alt => "", src: "/img/blog-1.jpg"}
+            %img.img-responsive.img-border.img-full.img-rounded{:alt => "", src: @post.img_url}
           %h2.text-center
             #{@post.title}
             %br
