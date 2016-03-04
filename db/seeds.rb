@@ -68,13 +68,13 @@ officers = [
 	  undergrad: true
 	  },
 	  { name: "Ruellia Zhang",
-	  title: "President",
+	  title: "Website Assistant",
 	  img_url: "/img/intro-pic.jpg",
 	  undergrad: true
 	  },
 	  { name: "Heather Myers",
 	  title: "President",
-	  img_url: "/img/heather.jpg",
+	  img_url: "/img/heathers.jpg",
 	  undergrad: false
 	  },
 	  { name: "Ashley Ongsarte",
