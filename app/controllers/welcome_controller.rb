@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
         @mice_officers = Officer.order("created_at asc").where(undergrad: false)
     end
 
-    def events
+    def calendar
     end
     def authors
     end

@@ -18,13 +18,17 @@
           %a{:href => post_index_path} Blog
         %li.dropdown
           %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-            Activities
+            Events
             %span.caret
           %ul.dropdown-menu
             %li
-              %a{:href => events_path} Events
+              %a{:href => calendar_path} Calendar
             %li
               %a{:href => current_hackathon_path} HackAThon
+            %li
+              %a{:href => hackathon_teams_path(@hackathon)} Approved teams
+            %li
+              %a{:href => new_hackathon_team_path(@hackathon)} Register
             - if admin?
               %li
                 %a{:href => tentative_teams_path} Tentative teams

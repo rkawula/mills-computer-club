@@ -3,11 +3,9 @@ class TeamsController < ApplicationController
 	def index
 		# Update to handle future year/semester combos.
 		@teams = Team.where approved: true
-		@hackathon = current_hackathon
 	end
 
 	def show
-		@hackathon = current_hackathon
 		@team = Team.find params[:id]
 		unless @team.approved or admin?
 			redirect_to hackathon_teams_path(current_hackathon)
@@ -15,7 +13,6 @@ class TeamsController < ApplicationController
 	end
 
 	def new
-		@hackathon = current_hackathon
 	end
 
 	def create
@@ -23,8 +20,6 @@ class TeamsController < ApplicationController
 		p_name = params[:team][:project_name]
 		summary = params[:team][:summary]
 		email = params[:team][:primary_contact_email]
-
-		@hackathon = current_hackathon
 
 		if p_name == "" or summary == "" or email == ""
 			flash[:warning] = "All fields must be filled in."
@@ -43,7 +38,6 @@ class TeamsController < ApplicationController
 
 	def tentative
 		redirect_to hackathon_teams_path(@hackathon) unless admin?
-		@hackathon = current_hackathon
 		@teams = Team.where approved: false
 	end
 

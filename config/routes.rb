@@ -28,7 +28,7 @@ MillsComputerClub::Application.routes.draw do
 
   # Routes for our static pages to show up.
   match '/index', :to => 'welcome#index'
-  match '/events', :to => 'welcome#events'
+  match '/calendar', :to => 'welcome#calendar'
   match '/resources', :to => 'welcome#resources'
   match '/media', :to => 'welcome#media'
   match '/authors', :to => 'welcome#authors'

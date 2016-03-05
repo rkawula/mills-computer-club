@@ -1,13 +1,13 @@
 class HackathonController < ApplicationController
 
+	# The @hackathon variable is set across all actions by
+	#  a before_filter in the ApplicationController.
+	# Will need updating after the current Hackathon.
 
 	def show
-		# Update to take requested hackathons
-		@hackathon = current_hackathon
 	end
 
 	def current
-		@hackathon = current_hackathon
 		render 'show'
 	end
 
