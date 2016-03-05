@@ -1,8 +1,8 @@
 class WelcomeController < ApplicationController
     
     def index
-        @mcc_officers = Officer.where(undergrad: true).order(created_at: :asc)
-        @mice_officers = Officer.where(undergrad: false).order(created_at: :asc)
+        @mcc_officers = Officer.order(created_at: :asc).where(undergrad: true)
+        @mice_officers = Officer.order(created_at: :asc).where(undergrad: false)
     end
 
     def events
