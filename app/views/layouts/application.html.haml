@@ -20,7 +20,6 @@
     = stylesheet_link_tag 'application', "http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
     .row
       .col-lg-12
-        = flash[:notice]
         %button.btn-google
           - if current_user
             Signed in as
@@ -32,7 +31,7 @@
       %a.brand{:href =>root_path} Mills Computer Club
       .address-bar 5000 MacArthur Boulevard | Oakland, CA 94613 | mcc@mills.edu
       = render 'layouts/navbar'
-
+      = render :partial => "layouts/flash", :locals => {:flash => flash}
       = yield
 
     %footer
