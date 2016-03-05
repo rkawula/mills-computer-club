@@ -92,3 +92,5 @@ officers = [
 officers.each do |o|
 	Officer.create! o
 end
+
+Hackathon.create! semester: 'spring', year: 2016

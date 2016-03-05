@@ -1,7 +1,7 @@
 class CreateHackathons < ActiveRecord::Migration
   def change
     create_table :hackathons do |t|
-      t.int :year
+      t.integer :year
       t.string :semester
 
       t.timestamps

@@ -13,6 +13,8 @@ MillsComputerClub::Application.routes.draw do
   resources :users, only: [:index, :show, :destroy]
   
   resources :post, only: [:index, :show]
+
+  get '/hackathon', to: 'hackathon#current', as:'current_hackathon'
   
   resources :hackathon, only: [:show] do
     resources :teams, only: [:index, :show]

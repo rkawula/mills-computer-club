@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160305002324) do
+ActiveRecord::Schema.define(:version => 20160305004903) do
+
+  create_table "hackathons", :force => true do |t|
+    t.integer  "year"
+    t.string   "semester"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "officers", :force => true do |t|
     t.string   "name"
