@@ -1,6 +1,6 @@
 ## Mills Computer Club website
 
-Development environment:
+# Development environment:
 
 To develop and test locally, you will need:
 
@@ -16,7 +16,28 @@ Rails v3.4 (TODO migrate to v4+)
 7. bundle install --without production
 8. Copy the config/initializers/omniauth.rb
 
-Troubleshooting/Known errors:
+# Deployment:
+
+Because all of our developers are horrible people and enjoy knowing their successors suffer, in order to deploy to Heroku you have to:
+
+1. Get the heroku remote added to your cloned git repo
+2. git push heroku master
+3. IF DB HAS CHANGED:
+3a. heroku run rake db:migrate
+3b. heroku run rails c (and edit/update any db stuff manually if it's not a CMS'd feature)
+4. heroku run bash
+5. cd config/initializers
+6. mv rename_omniauth.rb omniauth.rb (this uses the ENV variables set through heroku dashboard)
+
+If you need to update admin privileges in production:
+
+1. heroku run rails c
+2. u = User.find_by_email ('thenewadministrator@mills.edu')
+3. u.admin = true
+4. u.save!
+5. exit
+
+# Troubleshooting/Known errors:
 
 "no such file to load -- sqlite3/sqlite3_native" (LoadError)
 	+ gem uninstall sqlite3
@@ -33,3 +54,4 @@ ExecJS (Windows error)
 	+ Reopen a console window and try again
 
 Features NYI are on our Trello.
+
