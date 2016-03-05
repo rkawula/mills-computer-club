@@ -1,11 +1,14 @@
 class HackathonController < ApplicationController
+
+
 	def show
 		# Update to take requested hackathons
-		@hackathon = Hackathon.first
+		@hackathon = current_hackathon
 	end
 
 	def current
-		@hackathon = Hackathon.first
+		@hackathon = current_hackathon
 		render 'show'
 	end
+
 end

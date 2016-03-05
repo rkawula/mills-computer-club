@@ -74,7 +74,7 @@ officers = [
 	  },
 	  { name: "Heather Myers",
 	  title: "President",
-	  img_url: "/img/heathers.jpg",
+	  img_url: "/img/heather2.jpg",
 	  undergrad: false
 	  },
 	  { name: "Ashley Ongsarte",

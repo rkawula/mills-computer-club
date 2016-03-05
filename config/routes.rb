@@ -15,9 +15,13 @@ MillsComputerClub::Application.routes.draw do
   resources :post, only: [:index, :show]
 
   get '/hackathon', to: 'hackathon#current', as:'current_hackathon'
+
+  get '/hackathon/tentative-teams', to: 'teams#tentative', as: 'tentative_teams'
+
+  # Add /past-hackathons later, rerouting to index.
   
   resources :hackathon, only: [:show] do
-    resources :teams, only: [:index, :show]
+    resources :teams, only: [:index, :show, :new, :create]
   end
 
   root to: 'welcome#index'

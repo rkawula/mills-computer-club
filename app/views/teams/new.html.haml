@@ -1,0 +1,25 @@
+%body
+  .container
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              %strong Register
+            %hr
+          %p Enter a project name if you wish to form a team. Leave it blank if you want to join a team that already has an idea.
+          %p Enter the names of your teammates in the summary if you have already formed a team/partial team -- otherwise, summarize your project.
+          = form_for :team, url: hackathon_teams_path(@hackathon), method: :post do |form|
+            = form.label :project_name
+            %br
+            = form.text_field :project_name
+            %br
+            = form.label :primary_contact_email
+            %br
+            = form.text_field :primary_contact_email
+            %br
+            = form.label :summary
+            %br
+            = form.text_area :summary
+            %br
+            = form.submit 'Submit', class: 'btn btn-primary'

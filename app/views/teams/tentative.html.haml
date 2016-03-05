@@ -5,7 +5,7 @@
         .col-lg-12
           %hr
             %h2.intro-text.text-center
-              %strong Approved Teams
+              %strong Waiting for approval
             %hr
           - @teams.each do |t|
             %a{href: hackathon_team_path(@hackathon, t)} #{t.project_name}

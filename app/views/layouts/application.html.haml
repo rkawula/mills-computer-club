@@ -31,45 +31,7 @@
             = link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" 
       %a.brand{:href =>root_path} Mills Computer Club
       .address-bar 5000 MacArthur Boulevard | Oakland, CA 94613 | mcc@mills.edu
-      / Navigation
-      %nav.navbar.navbar-default{:role => "navigation"}
-        .container
-          / Brand and toggle get grouped for better mobile display
-          .navbar-header
-            %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-              %span.sr-only Toggle navigation
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            / navbar-brand is hidden on larger screens, but visible when the menu is collapsed
-            %a.navbar-brand{:href => root_path} Mills Computer Club
-          / Collect the nav links, forms, and other content for toggling
-          #bs-example-navbar-collapse-1.collapse.navbar-collapse
-            %ul.nav.navbar-nav.mills-nav
-              %li
-                %a{:href => root_path} Home          
-              %li
-                %a{:href => post_index_path} Blog
-              %li.dropdown
-                %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-                  Activities
-                  %span.caret
-                %ul.dropdown-menu
-                  %li
-                    %a{:href => events_path} Events
-                  %li
-                    %a{:href => current_hackathon_path} HackAThon
-              %li.dropdown
-                %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-                  Resources
-                  %span.caret
-                %ul.dropdown-menu
-                  %li 
-                    %a{:href => resources_path} FAQ
-                  %li
-                    %a{:href => media_path} Media
-                  %li
-                    %a{:href => users_path} Members
+      = render 'layouts/navbar'
 
       = yield
 

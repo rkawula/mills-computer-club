@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160305004903) do
+ActiveRecord::Schema.define(:version => 20160305025147) do
 
   create_table "hackathons", :force => true do |t|
     t.integer  "year"
@@ -54,6 +54,9 @@ ActiveRecord::Schema.define(:version => 20160305004903) do
     t.string   "project_name", :default => "undecided"
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
+    t.text     "summary"
+    t.string   "email"
+    t.boolean  "approved",     :default => false
   end
 
   create_table "users", :force => true do |t|
