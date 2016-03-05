@@ -16,6 +16,8 @@
 class User < ActiveRecord::Base
 
 	attr_accessible :profile, :uid, :name
+	belongs_to :team
+	has_many :hackathons, through: :team
 
 	def self.from_omniauth(auth)
 		# Finds user from database; else, creates new entry and saves.
