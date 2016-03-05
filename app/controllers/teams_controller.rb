@@ -7,7 +7,11 @@ class TeamsController < ApplicationController
 	end
 
 	def show
+		@hackathon = current_hackathon
 		@team = Team.find params[:id]
+		unless @team.approved or admin?
+			redirect_to hackathon_teams_path(current_hackathon)
+		end
 	end
 
 	def new
@@ -15,13 +19,30 @@ class TeamsController < ApplicationController
 	end
 
 	def create
-		@team = Team.create! project_name: params[:team][:project_name],
-				summary: params[:team][:summary],
-				email: params[:team][:primary_contact_email]
-		redirect_to hackathon_team_path(current_hackathon, @team)
+
+		p_name = params[:team][:project_name]
+		summary = params[:team][:summary]
+		email = params[:team][:primary_contact_email]
+
+		@hackathon = current_hackathon
+
+		if p_name == "" or summary == "" or email == ""
+			flash[:warning] = "All fields must be filled in."
+			redirect_to new_hackathon_team_path(@hackathon)
+		else
+		 	@team = Team.validate_and_create(p_name, summary, email, @hackathon)
+		 	if @team.valid?
+				redirect_to hackathon_team_path(@hackathon, @team)
+			else 
+				# Invalid team, but present fields.
+				flash[:warning] = "Your project name is taken! Please use another."
+				redirect_to new_hackathon_team_path(@hackathon)
+			end	
+		end
 	end
 
 	def tentative
+		redirect_to hackathon_teams_path(@hackathon) unless admin?
 		@hackathon = current_hackathon
 		@teams = Team.where approved: false
 	end

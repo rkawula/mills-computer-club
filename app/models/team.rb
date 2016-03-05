@@ -5,5 +5,14 @@ class Team < ActiveRecord::Base
 
   validates :project_name, presence: true,
   		uniqueness: { case_sensitive: false }
+
+  def self.validate_and_create project_name, summary, email, hackathon
+  	team = Team.new project_name: project_name, summary: summary, email: email
+    team.hackathon_id = hackathon
+  	if team.valid?
+  		team.save!
+    end
+    return team
+  end
   
 end

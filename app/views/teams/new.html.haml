@@ -9,6 +9,9 @@
             %hr
           %p Enter a project name if you wish to form a team. Leave it blank if you want to join a team that already has an idea.
           %p Enter the names of your teammates in the summary if you have already formed a team/partial team -- otherwise, summarize your project.
+          %p Teams will receive an email within a day, and be moved to approved.
+          %p Single registrants will be able to join approved teams that are not yet full, as well as be listed on a webpage for team formation.
+          %p Include any questions or concerns in the summary.
           = form_for :team, url: hackathon_teams_path(@hackathon), method: :post do |form|
             = form.label :project_name
             %br

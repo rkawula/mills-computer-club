@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160305025147) do
+ActiveRecord::Schema.define(:version => 20160305040544) do
 
   create_table "hackathons", :force => true do |t|
     t.integer  "year"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20160305025147) do
     t.text     "summary"
     t.string   "email"
     t.boolean  "approved",     :default => false
+    t.integer  "hackathon_id"
   end
 
   create_table "users", :force => true do |t|
