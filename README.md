@@ -32,7 +32,7 @@ Because all of our developers are horrible people and enjoy knowing their succes
 If you need to update admin privileges in production:
 
 1. heroku run rails c
-2. u = User.find_by_email ('thenewadministrator@mills.edu')
+2. u = User.find_by_name ('GivenName FamilyName')
 3. u.admin = true
 4. u.save!
 5. exit
