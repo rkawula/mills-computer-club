@@ -14,7 +14,8 @@ Rails v3.4 (TODO migrate to v4+)
 5. cd mills-computer-club
 6. gem install bundle
 7. bundle install --without production
-8. Copy the config/initializers/omniauth.rb
+8. rake db:migrate && rake db:seed
+9. Copy secret key & id into your system's ENV variables, to match the omniauth ENV variable names
 
 # Deployment:
 
@@ -25,9 +26,6 @@ Because all of our developers are horrible people and enjoy knowing their succes
 3. IF DB HAS CHANGED:
 3a. heroku run rake db:migrate
 3b. heroku run rails c (and edit/update any db stuff manually if it's not a CMS'd feature)
-4. heroku run bash
-5. cd config/initializers
-6. mv rename_omniauth.rb omniauth.rb (this uses the ENV variables set through heroku dashboard)
 
 If you need to update admin privileges in production:
 
