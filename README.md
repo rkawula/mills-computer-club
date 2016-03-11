@@ -55,3 +55,6 @@ ExecJS (Windows error)
 
 Features NYI are on our Trello.
 
+# TODO
+
+Add details on setting ENV variables for omniauth.rb, or move to figaro.
