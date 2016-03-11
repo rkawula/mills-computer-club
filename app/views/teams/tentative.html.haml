@@ -8,5 +8,8 @@
               %strong Waiting for approval
             %hr
           - @teams.each do |t|
-            %a{href: hackathon_team_path(@hackathon, t)} #{t.project_name}
             %p
+              Project
+              %a{href: hackathon_team_path(@hackathon, t)} #{t.project_name}
+              , contact at
+              %span= mail_to "#{t.email}", "#{t.email}"
