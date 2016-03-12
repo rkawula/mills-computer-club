@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
 
 	def index
 		# Update to handle future year/semester combos.
-		@teams = Team.where approved: true
+		# Currently static: @teams = Team.where approved: true
 	end
 
 	def show
