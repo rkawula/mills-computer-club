@@ -13,7 +13,7 @@
           %p Single registrants will be able to join approved teams that are not yet full, as well as be listed on a webpage for team formation.
           %p Include any questions or concerns in the summary.
           = form_for :team, url: hackathon_teams_path(@hackathon), method: :post do |form|
-            = form.label :project_name
+            = form.label "Project Name (leave blank if undecided)"
             %br
             = form.text_field :project_name
             %br
@@ -21,7 +21,7 @@
             %br
             = form.text_field :primary_contact_email
             %br
-            = form.label :summary
+            = form.label "Describe your project if you are a team -- describe your interests if you're looking for a team"
             %br
             = form.text_area :summary
             %br

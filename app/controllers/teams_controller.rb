@@ -21,7 +21,7 @@ class TeamsController < ApplicationController
 		summary = params[:team][:summary]
 		email = params[:team][:primary_contact_email]
 
-		if p_name == "" or summary == "" or email == ""
+		if summary == "" or email == ""
 			flash[:warning] = "All fields must be filled in."
 			redirect_to new_hackathon_team_path(@hackathon)
 		else

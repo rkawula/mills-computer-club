@@ -11,6 +11,9 @@ class Team < ActiveRecord::Base
   validates :summary, presence: true
 
   def self.validate_and_create project_name, summary, email, hackathon
+    if project_name == "" or project_name == nil
+      project_name = "Undecided"
+    end
   	team = Team.new project_name: project_name, summary: summary, email: email
     team.hackathon_id = hackathon
   	if team.valid?
