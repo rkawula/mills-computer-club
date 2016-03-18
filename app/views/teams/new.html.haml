@@ -7,10 +7,10 @@
             %h2.intro-text.text-center
               %strong Register
             %hr
-          %p Enter a project name if you wish to form a team. Leave it blank if you want to join a team that already has an idea.
-          %p Enter the names of your teammates in the summary if you have already formed a team/partial team -- otherwise, summarize your project.
-          %p Teams will receive an email within a day, and be moved to approved.
-          %p Single registrants will be able to join approved teams that are not yet full, as well as be listed on a webpage for team formation.
+          %p Have a project idea? Enter it here!
+          %p Enter the names of your teammates in the summary if you have already formed a team/partial team -- otherwise, summarize your interests. Are you interested in developing, designing, managing, or otherwise sharing your skills? Let us know!
+          %p Teams will be moved to the public approved page once an admin has reviewed your information.
+          %p Single registrants will be listed on the approved page, along with their interests and email.
           %p Include any questions or concerns in the summary.
           = form_for :team, url: hackathon_teams_path(@hackathon), method: :post do |form|
             = form.label "Project Name (leave blank if undecided)"
