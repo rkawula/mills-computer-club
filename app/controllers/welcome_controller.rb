@@ -6,9 +6,19 @@ class WelcomeController < ApplicationController
     end
 
     def calendar
+        # Do no extra work.
+        # At the end of this method,
+        # render the matching view.
     end
+
     def authors
     end
+
     def media
     end
+    
+    def admin
+        redirect_to root_path unless admin?
+    end
+
 end

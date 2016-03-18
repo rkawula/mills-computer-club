@@ -43,3 +43,6 @@
               %a{:href => media_path} Media
             %li
               %a{:href => users_path} Members
+            - if admin?
+              %li
+                %a{:href => admin_path} Admin

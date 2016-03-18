@@ -27,11 +27,12 @@ MillsComputerClub::Application.routes.draw do
   root to: 'welcome#index'
 
   # Routes for our static pages to show up.
-  match '/index', :to => 'welcome#index'
-  match '/calendar', :to => 'welcome#calendar'
-  match '/resources', :to => 'welcome#resources'
-  match '/media', :to => 'welcome#media'
-  match '/authors', :to => 'welcome#authors'
+  get '/index', to: 'welcome#index'
+  get '/calendar', to: 'welcome#calendar'
+  get '/resources', to: 'welcome#resources'
+  get '/media', to: 'welcome#media'
+  get '/authors', to: 'welcome#authors'
+  get '/admin', to: 'welcome#admin'
 
 
 end
