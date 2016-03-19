@@ -19,16 +19,14 @@ group :development, :test do
   gem 'webrick', '~> 1.3.1'
 end
 
+gem 'test-unit'
+
 group :test do
-  gem 'cucumber-rails', :require => false
-  gem 'cucumber-rails-training-wheels'
 
   gem 'database_cleaner'
-  gem 'capybara'
   gem 'launchy'
 
   gem 'ZenTest'
-  gem 'rspec-rails', '~>2.0'
   gem 'factory_girl_rails'
 end
 

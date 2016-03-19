@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160305040544) do
+ActiveRecord::Schema.define(:version => 20160319003403) do
 
   create_table "hackathons", :force => true do |t|
     t.integer  "year"
@@ -33,9 +33,10 @@ ActiveRecord::Schema.define(:version => 20160305040544) do
     t.string   "title"
     t.text     "contents"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.string   "img_url"
+    t.boolean  "published",  :default => false
   end
 
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
