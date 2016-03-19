@@ -51,6 +51,9 @@ ExecJS (Windows error)
 	+ Close all console windows/processes using rails
 	+ Reopen a console window and try again
 
+When trying to run rails console, "cannot load such file -- test/unit/testcase (LoadError)"
+	+ We added the gem "test-unit" because rails 3 is getting out of date and unsupported. You shouldn't see this error anymore!!! Try doing "bundle install" if you do.
+
 Features NYI are on our Trello.
 
 # TODO
