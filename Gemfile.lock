@@ -95,6 +95,7 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
+    pg (0.18.4)
     pg (0.18.4-x86-mingw32)
     polyglot (0.3.5)
     power_assert (0.2.2)
@@ -138,6 +139,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sqlite3 (1.3.11)
     sqlite3 (1.3.11-x86-mingw32)
     test-unit (3.0.8)
       power_assert
@@ -153,6 +155,7 @@ GEM
     webrick (1.3.1)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
