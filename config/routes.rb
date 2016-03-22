@@ -18,10 +18,13 @@ MillsComputerClub::Application.routes.draw do
 
   get '/hackathon/tentative-teams', to: 'teams#tentative', as: 'tentative_teams'
 
+  get '/hackathon/faq', to: 'hackathon#faq', as: 'faq'
+
   # Add /past-hackathons later, rerouting to index.
   
   resources :hackathon, only: [:show] do
     resources :teams, only: [:index, :show, :new, :create]
+
   end
 
   root to: 'welcome#index'
@@ -33,6 +36,5 @@ MillsComputerClub::Application.routes.draw do
   get '/media', to: 'welcome#media'
   get '/authors', to: 'welcome#authors'
   get '/admin', to: 'welcome#admin'
-
 
 end

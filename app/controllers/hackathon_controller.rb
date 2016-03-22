@@ -11,4 +11,7 @@ class HackathonController < ApplicationController
 		render 'show'
 	end
 
+	def faq
+	end
+
 end
