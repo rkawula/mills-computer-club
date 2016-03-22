@@ -24,6 +24,7 @@ MillsComputerClub::Application.routes.draw do
   
   resources :hackathon, only: [:show] do
     resources :teams, only: [:index, :show, :new, :create]
+    resources :sponsors, only: [:index]
 
   end
 
