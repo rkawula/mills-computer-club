@@ -17,9 +17,6 @@ group :development, :test do
     gem 'byebug'
   end
   gem 'webrick', '~> 1.3.1'
-  gem 'vagrant'
-  gem 'knife-solo'
-  gem 'librarian-chef'
 end
 
 gem 'test-unit'
