@@ -10,6 +10,8 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision :chef_solo do |chef|
+
+    
     chef.json = {}
     # Will finish provisioning later. Getting box to work first.
   end
