@@ -4,9 +4,6 @@ gem 'rails', '3.2.21'
 gem 'haml'
 gem 'annotate', '~>2.4.1.beta'
 
-# Handles ENV variables.
-gem 'figaro'
-
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
