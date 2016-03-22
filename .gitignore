@@ -12,3 +12,6 @@
 /config/application.yml
 
 *.lock
+
+# Ignore vagrant data
+./vagrant
