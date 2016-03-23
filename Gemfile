@@ -1,29 +1,19 @@
 source 'http://rubygems.org'
 
+ruby '2.2.1'
 gem 'rails', '3.2.21'
+
 gem 'haml'
-gem 'annotate', '~>2.4.1.beta'
 
-
-# for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   gem 'sqlite3'
-  if ("#{RUBY_VERSION}".to_i < 2)
-    gem 'debugger'
-  else
-    gem 'byebug'
-  end
+  gem 'byebug'
   gem 'webrick', '~> 1.3.1'
 end
 
-gem 'test-unit'
-
 group :test do
-
   gem 'database_cleaner'
   gem 'launchy'
-
-  gem 'ZenTest'
   gem 'factory_girl_rails'
 end
 
@@ -37,15 +27,9 @@ group :production do
   gem 'rails_12factor'
 end
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
 

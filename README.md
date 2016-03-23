@@ -4,20 +4,23 @@
 
 To develop and test locally, you will need:
 
-Ruby v2.2+ (suggested)
+Ruby v2.2.1
 Rails v3.4 (TODO migrate to v4+)
 
-1. Install Ruby/Rails @ railsinstaller.org
-2. Add SSH key to your GitHub account
-3. Create and/or cd into your folder containing your projects
-4. git clone git@github.com:rkawula/mills-computer-club
-5. cd mills-computer-club
-6. gem install bundle
-7. bundle install --without production
-8. rake db:migrate && rake db:seed
-9. Copy secret key & id into your system's ENV variables, to match the omniauth ENV variable names
+0. Install Vagrant, VirtualBox, Chef, and install the librarian-chef and guest-additions plugins for chef.
+1. Add SSH key to your GitHub account
+2. Create and/or cd into your folder containing your projects
+3. git clone git@github.com:rkawula/mills-computer-club
+4. cd mills-computer-club
+5. Copy secret key & id into your system's ENV variables, to match the omniauth ENV variable names
+6. vagrant up
+7. vagrant ssh
+8. cd /vagrant
+9. bundle install
+10. rake db:migrate && rake db:seed
+11. rails s -b 0.0.0.0
 
-ALTERNATIVE: VirtualBox, Vagrant, & Chef. Instructions TBA.
+ALTERNATIVE: Install Ruby 2.2.1 on your own system, follow steps 1-->5, and instead of the vagrant commands, skip straight to line 9. YMMV.
 
 # Deployment:
 
@@ -31,13 +34,15 @@ Because all of our developers are horrible people and enjoy knowing their succes
 
 If you need to update admin privileges in production:
 
-1. heroku run rails c
-2. u = User.find_by_name ('GivenName FamilyName')
-3. u.admin = true
-4. u.save!
-5. exit
+```
+heroku run rails c
+u = User.find_by_name('GivenName FamilyName')
+u.admin = true
+u.save!
+exit
+```
 
-# Troubleshooting/Known errors:
+# Troubleshooting/Known errors when not using Vagrant:
 
 "no such file to load -- sqlite3/sqlite3_native" (LoadError)
 	+ gem uninstall sqlite3
@@ -57,7 +62,3 @@ When trying to run rails console, "cannot load such file -- test/unit/testcase (
 	+ We added the gem "test-unit" because rails 3 is getting out of date and unsupported. You shouldn't see this error anymore!!! Try doing "bundle install" if you do.
 
 Features NYI are on our Trello.
-
-# TODO
-
-Add details on setting ENV variables for omniauth.rb, or move to figaro.
