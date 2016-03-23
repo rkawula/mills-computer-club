@@ -8,10 +8,10 @@ To develop and test locally, you will need to:
 2. Install Vagrant
 3. Install ChefDK
 4. Install Vagrant Guest and Librarian Chef plugins:
-'''
+```
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-librarian-chef-nochef
-'''
+```
 
 ## Get & run the code:
 
