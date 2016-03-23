@@ -17,6 +17,8 @@ Rails v3.4 (TODO migrate to v4+)
 8. rake db:migrate && rake db:seed
 9. Copy secret key & id into your system's ENV variables, to match the omniauth ENV variable names
 
+ALTERNATIVE: VirtualBox, Vagrant, & Chef. Instructions TBA.
+
 # Deployment:
 
 Because all of our developers are horrible people and enjoy knowing their successors suffer, in order to deploy to Heroku you have to:
