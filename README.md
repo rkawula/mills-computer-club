@@ -12,13 +12,13 @@ Rails v3.4 (TODO migrate to v4+)
 2. Create and/or cd into your folder containing your projects
 3. git clone git@github.com:rkawula/mills-computer-club
 4. cd mills-computer-club
-5. Copy secret key & id into your system's ENV variables, to match the omniauth ENV variable names
+5. Get the config/application.yml file from another member of the web dev team
 6. vagrant up
 7. vagrant ssh
 8. cd /vagrant
 9. bundle install
 10. rake db:migrate && rake db:seed
-11. rails s -b 0.0.0.0
+11. bundle exec rails s -b 0.0.0.0
 
 ALTERNATIVE: Install Ruby 2.2.1 on your own system, follow steps 1-->5, and instead of the vagrant commands, skip straight to line 9. YMMV.
 

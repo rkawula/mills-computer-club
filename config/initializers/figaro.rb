@@ -1,0 +1,1 @@
+Figaro.require_keys("google_oauth_id", "google_oauth_key")

@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 ruby '2.2.1'
 gem 'rails', '3.2.21'
-
+gem 'figaro'
 gem 'haml'
 
 group :development, :test do
