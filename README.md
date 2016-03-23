@@ -2,12 +2,19 @@
 
 ## Development environment:
 
-To develop and test locally, you will need:
+To develop and test locally, you will need to:
 
-Ruby v2.2.1
-Rails v3.4 (TODO migrate to v4+)
+1. Install VirtualBox
+2. Install Vagrant
+3. Install ChefDK
+4. Install Vagrant Guest and Librarian Chef plugins:
+'''
+vagrant plugin install vagrant-vbguest
+vagrant plugin install vagrant-librarian-chef-nochef
+'''
 
-0. Install Vagrant, VirtualBox, Chef, and install the librarian-chef and guest-additions plugins for chef.
+## Get & run the code:
+
 1. Add SSH key to your GitHub account
 2. Create and/or cd into your folder containing your projects
 3. git clone git@github.com:rkawula/mills-computer-club
@@ -17,7 +24,7 @@ Rails v3.4 (TODO migrate to v4+)
 7. vagrant ssh
 8. cd /vagrant
 9. bundle install
-10. rake db:migrate && rake db:seed
+10. rake db:setup
 11. bundle exec rails s -b 0.0.0.0
 
 ALTERNATIVE: Install Ruby 2.2.1 on your own system, follow steps 1-->5, and instead of the vagrant commands, skip straight to line 9. YMMV.
