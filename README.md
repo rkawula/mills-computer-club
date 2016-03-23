@@ -1,6 +1,6 @@
-## Mills Computer Club website
+# Mills Computer Club website
 
-# Development environment:
+## Development environment:
 
 To develop and test locally, you will need:
 
@@ -22,7 +22,7 @@ Rails v3.4 (TODO migrate to v4+)
 
 ALTERNATIVE: Install Ruby 2.2.1 on your own system, follow steps 1-->5, and instead of the vagrant commands, skip straight to line 9. YMMV.
 
-# Deployment:
+## Deployment:
 
 Because all of our developers are horrible people and enjoy knowing their successors suffer, in order to deploy to Heroku you have to:
 
@@ -42,7 +42,7 @@ u.save!
 exit
 ```
 
-# Troubleshooting/Known errors when not using Vagrant:
+## Troubleshooting/Known errors when not using Vagrant:
 
 "no such file to load -- sqlite3/sqlite3_native" (LoadError)
 	+ gem uninstall sqlite3

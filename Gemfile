@@ -1,37 +1,47 @@
 source 'http://rubygems.org'
 
 ruby '2.2.1'
-gem 'rails', '3.2.21'
-gem 'figaro'
 gem 'haml'
+gem 'less-rails', '~> 2.7.0'
+gem 'rails', '4.2.6'
+gem 'therubyracer'
+gem 'figaro'
+gem 'jquery-rails'
 
-group :development, :test do
-  gem 'sqlite3'
-  gem 'byebug'
-  gem 'webrick', '~> 1.3.1'
-end
+gem 'sass'
+gem 'sass-rails', '~> 4.0.3'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
 
-group :test do
-  gem 'database_cleaner'
-  gem 'launchy'
-  gem 'factory_girl_rails'
-end
+gem 'coffee-script-source', '1.8.0'
+gem 'coffee-script', '2.3.0'
+gem 'coffee-rails', '~> 4.0.1'
+
+# Needs to be replaced with strong parameters in the future
+gem 'protected_attributes'
+
+gem 'turbolinks'
+gem 'jbuilder', '~> 2.0'
 
 gem 'momentjs-rails'
 gem 'fullcalendar-rails'
 gem 'omniauth-google-oauth2'
-gem 'json'
+
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'byebug', '3.4.0'
+  gem 'rspec-rails', require: false
+  gem 'factory_girl_rails'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'capybara'
+end
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-end
-
-gem 'jquery-rails'
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
