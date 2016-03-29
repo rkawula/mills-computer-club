@@ -79,7 +79,7 @@ officers = [
 	  },
 	  { name: "Ashley Ongsarte",
 	  title: "Treasurer",
-	  img_url: "/img/intro-pic.jpg",
+	  img_url: "/img/ashley.jpg",
 	  undergrad: false
 	  },
 	  { name: "Rachel Kawula",
