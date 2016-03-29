@@ -39,5 +39,15 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
+  # Find ImageMagick commands.
   Paperclip.options[:command_path] = "/usr/bin/"
+
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => Figaro.env.S3_BUCKET_NAME,
+      :access_key_id => Figaro.env.AWS_ACCESS_KEY_ID,
+      :secret_access_key => Figaro.env.AWS_SECRET_ACCESS_KEY
+    }
+  }
 end
