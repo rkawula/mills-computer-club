@@ -17,3 +17,6 @@ package 'libssl-dev'
 package 'libffi-dev'
 package 'libpq-dev'
 package 'libreadline-dev'
+
+# For paperclip & AWS integration.
+package 'imagemagick'

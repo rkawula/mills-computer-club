@@ -8,6 +8,10 @@ gem 'therubyracer'
 gem 'figaro'
 gem 'jquery-rails'
 
+# Image storage and uploading.
+gem 'paperclip'
+gem 'aws-sdk', '>= 2.0.34'
+
 gem 'sass'
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
