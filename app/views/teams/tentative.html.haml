@@ -10,6 +10,6 @@
           - @teams.each do |t|
             %p
               Project
-              %a{href: hackathon_team_path(@hackathon, t)} #{t.project_name}
+              %a{href: hackathon_team_path(@hackathon, t)} #{t.project_name} :)
               , contact at
               %span= mail_to "#{t.email}", "#{t.email}"
