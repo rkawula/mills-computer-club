@@ -9,8 +9,8 @@ gem 'figaro'
 gem 'jquery-rails'
 
 # Image storage and uploading.
-gem 'paperclip'
-gem 'aws-sdk', '>= 2.0.34'
+gem 'paperclip', '~> 4.3'
+gem 'aws-sdk', '~> 1.6'
 
 gem 'sass'
 gem 'sass-rails', '~> 4.0.3'
