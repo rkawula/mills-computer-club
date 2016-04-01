@@ -84,7 +84,7 @@ officers = [
 	  },
 	  { name: "Rachel Kawula",
 	  title: "Website Admin",
-	  img_url: "/img/rachel.jpg",
+	  img_url: "https://s3-us-west-1.amazonaws.com/millscc/rachel.jpg",
 	  undergrad: false
 	  }
 ]
