@@ -27,7 +27,10 @@ Rails.application.routes.draw do
   resources :hackathon, only: [:show] do
     resources :teams, only: [:index, :show, :new, :create]
     resources :sponsors, only: [:index]
+  end
 
+  namespace :admin do
+    resources :officers, only: [:index]
   end
 
   root to: 'welcome#index'
