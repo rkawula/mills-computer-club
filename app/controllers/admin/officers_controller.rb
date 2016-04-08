@@ -1,7 +1,7 @@
-class Admin::OfficersController < ApplicationController
+class Admin::OfficersController < AdminController
 
   def index
-	# TODO
+	
   end
 
 end
