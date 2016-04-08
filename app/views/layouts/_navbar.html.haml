@@ -33,9 +33,6 @@
               %a{:href => hackathon_teams_path(@hackathon)} Approved teams
             %li
               %a{:href => new_hackathon_team_path(@hackathon)} Register
-            - if admin?
-              %li
-                %a{:href => tentative_teams_path} Tentative teams
         %li.dropdown
           %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
             Resources
