@@ -1,0 +1,15 @@
+.container
+  .row
+    .box
+      .col-lg-12
+        %hr
+          %h2.intro-text.text-center
+            %strong Officers
+          %hr
+        - @mcc_officers.each do |o|
+          = link_to "#{o.title} #{o.name}", edit_admin_officer_path(o)
+          %p
+        - @mice_officers.each do |o|
+          = link_to "#{o.title} #{o.name}", edit_admin_officer_path(o)
+          %p
+        = link_to "Add a new officer", new_admin_officer_path

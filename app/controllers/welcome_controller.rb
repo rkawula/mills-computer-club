@@ -16,9 +16,5 @@ class WelcomeController < ApplicationController
 
     def media
     end
-    
-    def admin
-        redirect_to root_path unless admin?
-    end
 
 end

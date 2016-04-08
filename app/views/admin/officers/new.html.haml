@@ -1,0 +1,9 @@
+.container
+  .row
+    .box
+      .col-lg-12
+        %hr
+          %h2.intro-text.text-center
+            %strong New officer
+          %hr
+        = render partial: 'layouts/officer_form', locals: {officer: @officer}

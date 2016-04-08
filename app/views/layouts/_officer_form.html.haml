@@ -1,0 +1,14 @@
+= form_for [:admin, officer] do |o|
+  = o.label "Name"
+  = o.text_field :name
+  %p
+  = o.label "Title"
+  = o.text_field :title
+  %p
+  = o.label "Link to image"
+  = o.text_field :img_url
+  %p
+  = o.label "Undergraduate officer?"
+  = o.check_box :undergrad
+  %p
+  = o.submit "Submit"

@@ -27,17 +27,19 @@ Rails.application.routes.draw do
   resources :hackathon, only: [:show] do
     resources :teams, only: [:index, :show, :new, :create]
     resources :sponsors, only: [:index]
+  end
 
+  resources :admin, only: [:index]
+
+  namespace :admin do
+    resources :officers, only: [:index, :edit, :update,
+                              :new, :create, :destroy]
   end
 
   root to: 'welcome#index'
-
-  # Routes for our static pages to show up.
-  get '/index', to: 'welcome#index'
   get '/calendar', to: 'welcome#calendar'
   get '/resources', to: 'welcome#resources'
   get '/media', to: 'welcome#media'
   get '/authors', to: 'welcome#authors'
-  get '/admin', to: 'welcome#admin'
 
 end
