@@ -7,3 +7,5 @@
             %strong Edit Officer
           %hr
         = render partial: 'layouts/officer_form', locals: {officer: @officer}
+        %p
+        = button_to "Delete", admin_officer_path(@officer), method: :delete, data: {confirm: "Warning! Do you want to delete #{@officer.name}?"}

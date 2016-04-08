@@ -32,7 +32,8 @@ Rails.application.routes.draw do
   resources :admin, only: [:index]
 
   namespace :admin do
-    resources :officers, only: [:index, :edit, :update]
+    resources :officers, only: [:index, :edit, :update,
+                              :new, :create, :destroy]
   end
 
   root to: 'welcome#index'
