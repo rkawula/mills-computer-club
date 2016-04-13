@@ -6,5 +6,9 @@ class PostController < ApplicationController
 
 	def show
 		@post = Post.find params[:id]
+		unless @post.published?
+			flash[:warning] = "Sorry! That post is not yet published."
+			redirect_to post_index_path
+		end
 	end
 end
