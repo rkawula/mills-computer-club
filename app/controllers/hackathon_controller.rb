@@ -1,5 +1,5 @@
 class HackathonController < ApplicationController
-
+	before_filter :set_current_hackathon
 	# The @hackathon variable is set across all actions by
 	#  a before_filter in the ApplicationController.
 	# Will need updating after the current Hackathon.
@@ -12,6 +12,9 @@ class HackathonController < ApplicationController
 	end
 
 	def faq
+	end
+
+	def sponsors
 	end
 
 end

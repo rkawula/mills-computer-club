@@ -25,8 +25,8 @@ Rails.application.routes.draw do
   # Add /past-hackathons later, rerouting to index.
   
   resources :hackathon, only: [:show] do
+    get '/sponsors', to: 'hackathon#sponsors', as: 'sponsors'
     resources :teams, only: [:index, :show, :new, :create]
-    resources :sponsors, only: [:index]
   end
 
   resources :admin, only: [:index]
