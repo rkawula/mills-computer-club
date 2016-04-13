@@ -1,0 +1,11 @@
+.container
+  .row
+    .box
+      .col-lg-12
+        %hr
+          %h2.intro-text.text-center
+            %strong Edit Post
+          %hr
+        = render partial: 'layouts/post_form', locals: {post: @post}
+        %p
+        = button_to "Delete", admin_post_path(@post), method: :delete, data: {confirm: "Warning! Do you want to delete this post?"}

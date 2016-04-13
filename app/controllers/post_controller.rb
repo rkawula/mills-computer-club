@@ -1,7 +1,7 @@
 class PostController < ApplicationController
 
 	def index
-		@posts = Post.limit(5)
+		@posts = Post.where(published: true).order(created_at: :desc).limit 5
 	end
 
 	def show

@@ -29,12 +29,15 @@ Rails.application.routes.draw do
     resources :teams, only: [:index, :show, :new, :create]
   end
 
-  resources :admin, only: [:index]
-
   namespace :admin do
     resources :officers, only: [:index, :edit, :update,
                               :new, :create, :destroy]
+    resources :posts, only: [:index, :new, :create, :edit,
+                              :destroy, :update]
   end
+
+
+  resources :admin, only: [:index]
 
   root to: 'welcome#index'
   get '/calendar', to: 'welcome#calendar'

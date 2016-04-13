@@ -1,0 +1,17 @@
+= form_for [:admin, post] do |p|
+  = p.label "Title"
+  %p
+  = p.text_field :title
+  %p
+  = p.label "Link to image"
+  %p
+  = p.text_field :img_url
+  %p
+  = p.label "contents"
+  %p
+  = p.text_area :contents
+  %p
+  = p.label "Publish?"
+  = p.check_box :published
+  %p
+  = p.submit "Submit"

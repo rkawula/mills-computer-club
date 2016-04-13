@@ -1,7 +1,7 @@
 class Admin::OfficersController < AdminController
 
   def index
-	@mcc_officers = Officer.order("created_at asc").where(undergrad: true)
+	  @mcc_officers = Officer.order("created_at asc").where(undergrad: true)
     @mice_officers = Officer.order("created_at asc").where(undergrad: false)
   end
 
