@@ -15,6 +15,9 @@
           %h2.text-center
             #{@post.title}
             %br
-              %small #{@post.created_at}
+            - if @author
+              %small Posted by #{@author.name} on #{@post.created_date_readable}
+            - else
+              %small Posted by Admin on #{@post.created_date_readable}
           - @post.contents.split("\n").each do |paragraph|
             %p #{paragraph}

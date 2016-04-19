@@ -1,10 +1,10 @@
-.col-lg-12.text-center
+.col-lg-12.text-center{id: "post-#{post.id}"}
   - if post.img_url
     %img.img-responsive.img-border.img-full.img-rounded{:alt => "", src: post.img_url}
   %h2
     #{post.title}
     %br
-      %small #{post.created_at}
+      %small #{post.created_date_readable}
   %br
   %a.btn.btn-default.btn-lg{href: post_path(post)} Read More
   %hr

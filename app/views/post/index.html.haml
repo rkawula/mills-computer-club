@@ -8,7 +8,8 @@
               Club
               %strong blog
             %hr
-        = render partial: 'layouts/post_preview', :collection => @posts, as: :post
+        - @posts.each do |post|
+          = render 'layouts/post_preview', post: post
         .col-lg-12.text-center
           %ul.pager
             %li.previous
