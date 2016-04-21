@@ -11,18 +11,19 @@ class Admin::PostsController < AdminController
 	def create
 		@post = Post.new params[:post]
 		@post.user_id = current_user.id
-		@post.create_slug
+		@post.slug = @post.create_slug
 		@post.save!
 		redirect_to edit_admin_post_path @post
 	end
 
 	def edit
-		@post = Post.find params[:id]
+		@post = Post.find_by_slug params[:id]
 	end
 
 	def update
-		@post = Post.find params[:id]
+		@post = Post.find_by_slug params[:id]
 		if @post.update_attributes params[:post]
+			@post.slug = @post.create_slug
 			if @post.published
 				flash[:success] = "Post published!"
 				return redirect_to post_path @post
@@ -37,7 +38,7 @@ class Admin::PostsController < AdminController
 
 	def destroy
 		begin
-			@post = Post.find params[:id]
+			@post = Post.find_by_slug params[:id]
 			Post.delete @post
 			flash[:info] = 'Post deleted.'
 			redirect_to admin_posts_path
