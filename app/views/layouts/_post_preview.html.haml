@@ -1,6 +1,5 @@
 .col-lg-12.text-center{id: "post-#{post.id}"}
-  - if post.img_url
-    %img.img-responsive.img-border.img-full.img-rounded{:alt => "", src: post.img_url}
+  %img.img-responsive.img-border.img-full.img-rounded{:alt => "", src: post.image.url}
   %h2
     #{post.title}
     %br

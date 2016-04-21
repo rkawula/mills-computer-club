@@ -9,9 +9,7 @@
               %strong blog
             %hr
         .col-lg-12
-          / Disable images until CDN is ready.
-          - if false
-            %img.img-responsive.img-border.img-full.img-rounded{:alt => "", src: @post.img_url}
+          = image_tag @post.image.url, class: "img img-responsive img-border img-full img-rounded", alt: ""
           %h2.text-center
             #{@post.title}
             %br

@@ -1,4 +1,4 @@
-= form_for [:admin, post] do |p|
+= form_for([:admin, post], multipart: true) do |p|
   = p.label "Title"
   %p
   = p.text_field :title
@@ -6,6 +6,10 @@
   = p.label "Link to image"
   %p
   = p.text_field :img_url
+  %p
+  = p.label :image
+  %p
+  = p.file_field :image
   %p
   = p.label "contents"
   %p
