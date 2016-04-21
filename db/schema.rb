@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160421025442) do
+ActiveRecord::Schema.define(version: 20160421185340) do
 
   create_table "hackathons", force: :cascade do |t|
     t.integer  "year"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20160421025442) do
   create_table "officers", force: :cascade do |t|
     t.string   "name"
     t.string   "title"
-    t.string   "img_url"
     t.boolean  "undergrad"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -39,7 +38,6 @@ ActiveRecord::Schema.define(version: 20160421025442) do
     t.integer  "user_id"
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
-    t.string   "img_url"
     t.boolean  "published",          default: false
     t.string   "image_file_name"
     t.string   "image_content_type"

@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :user
   has_attached_file :image
-  attr_accessible :slug, :contents, :title, :user_id, :img_url, :image, :published
+  attr_accessible :slug, :contents, :title, :user_id, :image, :published
 
   validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
