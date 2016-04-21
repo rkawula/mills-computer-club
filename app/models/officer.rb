@@ -1,3 +1,6 @@
 class Officer < ActiveRecord::Base
-  attr_accessible :name, :title, :img_url, :undergrad
+  has_attached_file :image
+  attr_accessible :name, :title, :img_url, :undergrad, :image
+  validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+
 end

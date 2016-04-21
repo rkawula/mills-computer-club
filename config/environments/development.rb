@@ -44,6 +44,7 @@ Rails.application.configure do
 
   config.paperclip_defaults = {
     :storage => :s3,
+    :default_url => '/img/intro-pic.jpg',
     :url =>':s3_domain_url',
     :path => '/development/:class/:attachment/:id_partition/:style/:filename',
     :s3_credentials => {
