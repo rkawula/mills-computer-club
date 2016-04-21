@@ -11,6 +11,7 @@ class Admin::PostsController < AdminController
 	def create
 		@post = Post.new params[:post]
 		@post.user_id = current_user.id
+		@post.create_slug
 		@post.save!
 		redirect_to edit_admin_post_path @post
 	end

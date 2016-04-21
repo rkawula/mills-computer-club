@@ -12,6 +12,8 @@ Feature: Visitors can easily read blog posts created by the website team.
 		When I visit the "Blog" page
 		Then I should see exactly "5" posts
 
+	Scenario: View specific blog post.
+
 		Given that there is a blog post titled "First post", by user id "1", with contents "Hello world"
 		And that there is a user with id "1", named "Rachel Kawula"
 		When I visit the "Blog" page
@@ -26,3 +28,5 @@ Feature: Visitors can easily read blog posts created by the website team.
 		Then I should see "Second post"
 		And I should see "Posted by Admin"
 		And I should see "Another post has been created!"
+
+	Scenario: Posts have nice slugs and avoid collision.
