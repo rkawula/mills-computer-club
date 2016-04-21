@@ -81,7 +81,7 @@ Rails.application.configure do
     :storage => :s3,
     :url =>':s3_domain_url',
     :default_url => '/img/intro-pic.jpg',
-    :path => '/:class/:attachment/:id_partition/:style/:filename',
+    :path => '/production/:class/:attachment/:id_partition/:style/:filename',
     :s3_credentials => {
       :bucket => Figaro.env.S3_BUCKET_NAME,
       :access_key_id => Figaro.env.AWS_ACCESS_KEY_ID,
