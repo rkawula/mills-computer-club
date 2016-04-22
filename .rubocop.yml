@@ -1,0 +1,11 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  Exclude:
+    - 'cookbooks/**/*'
+    - 'site-cookbooks/**/*'
+    - 'tmp/**/*'
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
+    - 'lib/**/*'
