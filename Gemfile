@@ -40,6 +40,7 @@ group :development, :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'rubocop', '~> 0.39.0', require: false
 end
 
 group :production do

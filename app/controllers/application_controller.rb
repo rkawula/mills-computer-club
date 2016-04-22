@@ -4,8 +4,7 @@ class ApplicationController < ActionController::Base
 
   include HackathonHelper, SessionsHelper
 
-	def set_current_hackathon
-  		@hackathon ||= current_hackathon
-	end
-
+  def set_current_hackathon
+    @hackathon ||= current_hackathon
+  end
 end
