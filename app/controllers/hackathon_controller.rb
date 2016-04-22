@@ -1,5 +1,5 @@
 class HackathonController < ApplicationController
-  before_filter :set_current_hackathon
+  before_action :set_current_hackathon
   # The @hackathon variable is set across all actions by
   #  set_current_hackathon in the ApplicationController.
   # The current hackathon is set to the first/only

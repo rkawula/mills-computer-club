@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-  before_filter :set_current_hackathon
+  before_action :set_current_hackathon
   def index
     # Update to handle future year/semester combos.
     # Currently static: @teams = Team.where approved: true
