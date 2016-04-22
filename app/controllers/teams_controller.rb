@@ -16,26 +16,28 @@ class TeamsController < ApplicationController
   end
 
   def create
-    p_name = params[:team][:project_name]
-    summary = params[:team][:summary]
-    email = params[:team][:primary_contact_email]
-    if summary == '' || email == ''
-      flash[:warning] = 'All fields must be filled in.'
-      redirect_to new_hackathon_team_path(@hackathon)
-    else
-      @team = Team.validate_and_create(p_name, summary, email, @hackathon)
-      if @team.valid?
-        redirect_to hackathon_team_path(@hackathon, @team)
-      else
-        # Invalid team, but present fields.
-        flash[:warning] = 'Your project name is taken! Please use another.'
-        redirect_to new_hackathon_team_path(@hackathon)
-      end
+    if invalid_input? params[:team]
+      return redirect_to new_hackathon_team_path(@hackathon)
     end
+    @team = Team.validate_and_create(params[:team], @hackathon)
+    return redirect_to hackathon_team_path(@hackathon, @team) if @team.valid?
+    # Invalid team, but present fields.
+    flash[:warning] = 'Your project name is taken! Please use another.'
+    redirect_to new_hackathon_team_path(@hackathon)
   end
 
   def tentative
     redirect_to hackathon_teams_path(@hackathon) unless admin?
     @teams = Team.where approved: false
+  end
+
+  private
+
+  def invalid_input?(team)
+    if team[:summary] == '' || team[:email] == ''
+      flash[:warning] = 'Name and Email fields must be filled in.'
+      return true
+    end
+    false
   end
 end

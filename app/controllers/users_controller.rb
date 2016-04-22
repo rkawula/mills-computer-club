@@ -19,9 +19,9 @@ class UsersController < ApplicationController
   end
 
   def edit_profile
-    @user = User.find_by_id(current_user[:id])
+    @user = current_user
     if params[:user][:profile] != ''
-      @user.update_attributes(params[:user])
+      @user.update_attributes params[:user]
       flash[:notice] = 'Saved changes.'
       render 'show'
     else

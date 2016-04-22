@@ -31,7 +31,6 @@ gem 'momentjs-rails'
 gem 'fullcalendar-rails'
 gem 'omniauth-google-oauth2'
 
-
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', '3.4.0'
@@ -49,4 +48,3 @@ group :production do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
-

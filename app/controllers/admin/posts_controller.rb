@@ -21,18 +21,13 @@ class Admin::PostsController < AdminController
 
   def update
     @post = Post.find_by_slug params[:id]
-    if @post.update_attributes params[:post]
-      @post.slug = @post.create_slug
-      if @post.published
-        flash[:success] = 'Post published!'
-        return redirect_to post_path @post
-      else
-        flash[:success] = 'Post updated.'
-      end
-    else
+    unless @post.update_attributes params[:post]
       flash[:danger] = 'Something went wrong!'
+      return redirect_to admin_posts_path
     end
-    redirect_to admin_posts_path
+    @post.slug = @post.create_slug
+    flash[:success] = @post.published ? 'Post published!' : 'Post updated.'
+    redirect_to post_path @post
   end
 
   def destroy
