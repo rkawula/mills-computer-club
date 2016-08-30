@@ -1,56 +1,50 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.21'
+ruby '2.2.1'
 gem 'haml'
-gem 'annotate', '~>2.4.1.beta'
+gem 'less-rails', '~> 2.7.0'
+gem 'rails', '4.2.6'
+gem 'therubyracer'
+gem 'figaro'
+gem 'jquery-rails'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# Image storage and uploading.
+gem 'paperclip', '~> 4.3'
+gem 'aws-sdk', '~> 1.6'
 
-# for Heroku deployment - as described in Ap. A of ELLS book
-group :development, :test do
-  gem 'sqlite3'
-  if ("#{RUBY_VERSION}".to_i < 2)
-    gem 'debugger'
-  else
-    gem 'byebug'
-  end
-  gem 'webrick', '~> 1.3.1'
-end
+gem 'sass'
+gem 'sass-rails', '~> 4.0.3'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
 
-group :test do
-	gem 'cucumber-rails', :require => false
-	gem 'cucumber-rails-training-wheels'
+gem 'coffee-script-source', '1.8.0'
+gem 'coffee-script', '2.3.0'
+gem 'coffee-rails', '~> 4.0.1'
 
-	gem 'database_cleaner'
-	gem 'capybara'
-	gem 'launchy'
+# Needs to be replaced with strong parameters in the future
+gem 'protected_attributes'
 
-  gem 'ZenTest'
-  gem 'rspec-rails', '~>2.0'
-  gem 'factory_girl_rails'
-end
+gem 'turbolinks'
+gem 'jbuilder', '~> 2.0'
 
 gem 'momentjs-rails'
 gem 'fullcalendar-rails'
 gem 'omniauth-google-oauth2'
-gem 'json'
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'byebug', '3.4.0'
+  gem 'rspec-rails', require: false
+  gem 'factory_girl_rails'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'rubocop', '~> 0.39.0', require: false
+end
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
-
-gem 'jquery-rails'
+gem 'tzinfo-data', platforms: [:mingw, :mswin]

@@ -1,0 +1,18 @@
+%body
+  .container
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              Club
+              %strong blog
+            %hr
+        - @posts.each do |post|
+          = render 'layouts/post_preview', post: post
+        .col-lg-12.text-center
+          %ul.pager
+            %li.previous
+              %a{:href => "#"} &larr; Older
+            %li.next
+              %a{:href => "#"} Newer &rarr;

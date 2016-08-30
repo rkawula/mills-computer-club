@@ -1,0 +1,13 @@
+.container
+  .row
+    .box
+      .col-lg-12
+        %hr
+          %h2.intro-text.text-center
+            %strong Blog CMS
+          %hr
+        - @posts.each do |p|
+          = link_to "Edit: " + p.title, edit_admin_post_path(p)
+          %p
+        = link_to "Make new post", new_admin_post_path
+        %p

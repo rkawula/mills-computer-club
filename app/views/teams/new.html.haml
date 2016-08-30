@@ -1,0 +1,28 @@
+%body
+  .container
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              %strong Register
+            %hr
+          %p Have a project idea? Enter it here!
+          %p Enter the names of your teammates in the summary if you have already formed a team/partial team -- otherwise, summarize your interests. Are you interested in developing, designing, managing, or otherwise sharing your skills? Let us know!
+          %p Teams will be moved to the public approved page once an admin has reviewed your information.
+          %p Single registrants will be listed on the approved page, along with their interests and email.
+          %p Include any questions or concerns in the summary.
+          = form_for :team, url: hackathon_teams_path(@hackathon), method: :post do |form|
+            = form.label "Project Name (leave blank if undecided)"
+            %br
+            = form.text_field :project_name
+            %br
+            = form.label :primary_contact_email
+            %br
+            = form.text_field :primary_contact_email
+            %br
+            = form.label "Describe your project if you are a team -- describe your interests if you're looking for a team"
+            %br
+            = form.text_area :summary
+            %br
+            = form.submit 'Submit', class: 'btn btn-primary'

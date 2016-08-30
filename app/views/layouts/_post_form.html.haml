@@ -1,0 +1,17 @@
+= form_for([:admin, post], multipart: true) do |p|
+  = p.label "Title"
+  %p
+  = p.text_field :title
+  %p
+  = p.label :image
+  %p
+  = p.file_field :image
+  %p
+  = p.label "contents"
+  %p
+  = p.text_area :contents
+  %p
+  = p.label "Publish?"
+  = p.check_box :published
+  %p
+  = p.submit "Submit"

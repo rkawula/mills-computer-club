@@ -1,0 +1,16 @@
+%body
+  .container
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              %strong Spring 2016 HackAThon Team
+            %hr
+        - if #{@team.approved}
+          %p.text-center Current status: Waiting review.
+        - else
+          %p.text-center Current status: Approved.
+        %h3.text-center #{@team.project_name}
+        %p.text-center Summary:
+        %p.text-center #{@team.summary}

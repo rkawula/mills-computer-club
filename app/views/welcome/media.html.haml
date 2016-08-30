@@ -1,0 +1,34 @@
+%body
+  #fb-root
+  :javascript
+    (function(d,s,id)){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));  
+  .container
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              %strong Twitter
+            %hr
+              %a.twitter-timeline{"data-widget-id" => "586568364987826178", :href => "https://twitter.com/MillsCompClub"} Tweets by @MillsCompClub
+              :javascript
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              %strong Facebook
+            %hr
+              .fb-page{"data-hide-cover" => "false", "data-href" => "https://www.facebook.com/MillsComputerScienceClub", "data-show-facepile" => "true", "data-show-posts" => "true"}
+                .fb-xfbml-parse-ignore
+                  %blockquote{:cite =>"https://www.facebook.com/MillsComouterScienceClub"}
+                    %a{:href => "https://www.facebook.com/MillsComputerScienceClub"} Mills Computer Club
+
+  / /.container

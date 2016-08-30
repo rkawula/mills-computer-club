@@ -1,4 +1,6 @@
-MillsComputerClub::Application.routes.draw do
+Rails.application.routes.draw do
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
 
   # Routes for logging in and out through Google.
   get 'auth/:provider/callback', to: 'sessions#create'
@@ -11,17 +13,36 @@ MillsComputerClub::Application.routes.draw do
 
   resources :sessions, only: [:create, :destroy]
   resources :users, only: [:index, :show, :destroy]
+  
+  resources :post, only: [:index, :show]
+
+  get '/hackathon', to: 'hackathon#current', as:'current_hackathon'
+
+  get '/hackathon/tentative-teams', to: 'teams#tentative', as: 'tentative_teams'
+
+  get '/hackathon/faq', to: 'hackathon#faq', as: 'faq'
+
+  # Add /past-hackathons later, rerouting to index.
+  
+  resources :hackathon, only: [:show] do
+    get '/sponsors', to: 'hackathon#sponsors', as: 'sponsors'
+    resources :teams, only: [:index, :show, :new, :create]
+  end
+
+  namespace :admin do
+    resources :officers, only: [:index, :edit, :update,
+                              :new, :create, :destroy]
+    resources :posts, only: [:index, :new, :create, :edit,
+                              :destroy, :update]
+  end
+
+
+  resources :admin, only: [:index]
 
   root to: 'welcome#index'
-
-  # Routes for our static pages to show up.
-  match '/index', :to => 'welcome#index'
-  match '/blog', :to => 'welcome#blog'
-  match '/events', :to => 'welcome#events'
-  match '/projects', :to => 'welcome#projects'
-  match '/resources', :to => 'welcome#resources'
-  match '/achievements', :to => 'welcome#achievements'
-  match '/authors', :to => 'welcome#authors'
-
+  get '/calendar', to: 'welcome#calendar'
+  get '/resources', to: 'welcome#resources'
+  get '/media', to: 'welcome#media'
+  get '/authors', to: 'welcome#authors'
 
 end

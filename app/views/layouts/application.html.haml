@@ -1,60 +1,42 @@
 !!!
-%html
+%html{:lang => "en"}
   %head
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
+    = stylesheet_link_tag 'application', "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    = stylesheet_link_tag 'application', "http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    %link{:href => "img/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{href: "https://s3-us-west-1.amazonaws.com/millscc/favicon.ico", rel: "shortcut icon", type: "image/x-icon"}
+    %meta{:charset => "utf-8"}
+      %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+        %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+          %meta{:content => "", :name => "description"}
+            %meta{:content => "", :name => "author"}
+              %title Mills Computer Club
+              %script{:crossorigin => "anonymous", :integrity => "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
+              %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :integrity => "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", :rel => "stylesheet"}
   %body
-    .brand Mills Computer Club
-    .address-bar 5000 MacArthur Boulevard | Oakland, CA 94613 | mcc@mills.edu
-    / Navigation
-    %nav.navbar.navbar-default{:role => "navigation"}
-      .container
-        / Brand and toggle get grouped for better mobile display
-        .navbar-header
-          %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          / navbar-brand is hidden on larger screens, but visible when the menu is collapsed
-          %a.navbar-brand{:href => root_path} Mills Computer Club
-        / Collect the nav links, forms, and other content for toggling
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          %ul.nav.navbar-nav.mills-nav
-            %li
-              %a{:href => root_path} Home
-            %li
-              %a{:href => blog_path} Blog
-            %li
-              %a{:href => events_path} Events
-            %li
-              %a{:href => users_path} Members
-            %li
-              %a{:href => projects_path} Projects
-            %li
-              %a{:href => achievements_path} Achievements
-            %li
-              %a{:href => resources_path} Resources
-        / /.navbar-collapse
-      / /.container
+    = stylesheet_link_tag 'application', "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    = stylesheet_link_tag 'application', "http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
     .row
       .col-lg-12
-        = flash[:notice]
-        %button.btn.btn-default
+        %button.btn-google
           - if current_user
             Signed in as
             = succeed "!" do
               %strong= current_user.name
-            = link_to "Sign out", signout_path, id: "sign_out"
+              = link_to "Sign out", signout_path, id:"sign_out"
           - else
             = link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" 
-    = yield
+      %a.brand{:href =>root_path} Mills Computer Club
+      .address-bar 5000 MacArthur Boulevard | Oakland, CA 94613 | mcc@mills.edu
+      = render 'layouts/navbar'
+      = render :partial => "layouts/flash", :locals => {:flash => flash}
+      = yield
 
-  %footer
-    .container
-      .row
-        .col-lg-12.text-center
-          %p
-            %a{:href => authors_path}Website Authorship
+    %footer
+      .container
+        .row
+          .col-lg-12.text-center
+            %p
+              %a{:href => authors_path}Website Authorship

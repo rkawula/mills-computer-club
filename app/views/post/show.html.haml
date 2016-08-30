@@ -1,0 +1,21 @@
+%body
+  .container
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              Club
+              %strong blog
+            %hr
+        .col-lg-12
+          = image_tag @post.image.url, class: "img img-responsive img-border img-full img-rounded", alt: ""
+          %h2.text-center
+            #{@post.title}
+            %br
+            - if @author
+              %small Posted by #{@author.name} on #{@post.created_date_readable}
+            - else
+              %small Posted by Admin on #{@post.created_date_readable}
+          - @post.contents.split("\n").each do |paragraph|
+            %p #{paragraph}

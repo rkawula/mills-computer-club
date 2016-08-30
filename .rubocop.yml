@@ -1,0 +1,24 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  Exclude:
+    - 'cookbooks/**/*'
+    - 'site-cookbooks/**/*'
+    - 'tmp/**/*'
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
+    - 'lib/**/*'
+    - 'features/support/env.rb'
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'Cheffile'
+    - 'config.ru'
+    - 'Rakefile'
+    - 'Vagrantfile'
+    - 'script/**/*'
+# Temporarily ignore documentation until other
+# errors have been fixed.
+Documentation:
+  Enabled: false

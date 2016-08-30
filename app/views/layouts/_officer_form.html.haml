@@ -1,0 +1,14 @@
+= form_for([:admin, officer], multipart: true) do |o|
+  = o.label "Name"
+  = o.text_field :name
+  %p
+  = o.label "Title"
+  = o.text_field :title
+  %p
+  = o.label "Image"
+  = o.file_field :image
+  %p
+  = o.label "Undergraduate officer?"
+  = o.check_box :undergrad
+  %p
+  = o.submit "Submit"

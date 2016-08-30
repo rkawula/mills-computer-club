@@ -1,140 +1,101 @@
-!!!
-%html{:lang => "en"}
-  %head
-    %meta{:charset => "utf-8"}
-      %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
-        %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
-          %meta{:content => "", :name => "description"}
-            %meta{:content => "", :name => "author"}
-              %title Mills Computer Club
-              / Fonts
-              %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}
-                %link{:href => "http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic", :rel => "stylesheet", :type => "text/css"}
-                  / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-                  / WARNING: Respond.js doesn't work if you view the page via file://
-                  /[if lt IE 9]
-                    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-                    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  %body
-    .container
-      .row
-        .box
-          .col-lg-12.text-center
-            #carousel-example-generic.carousel.slide
-              / Indicators
-              %ol.carousel-indicators.hidden-xs
-                %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
-                %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-                %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
-              / Wrapper for slides
-              .carousel-inner
-                .item.active
-                  %img.img-responsive.img-full{:alt => "", :src => "img/slide-1.jpg"}
-                .item
-                  %img.img-responsive.img-full{:alt => "", :src => "img/slide-2.jpg"}
-                .item
-                  %img.img-responsive.img-full{:alt => "", :src => "img/slide-3.jpg"}
-              / Controls
-              %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic"}
-                %span.icon-prev
-              %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic"}
-                %span.icon-next
-            / %h2.brand-before
-            /   %small Welcome to
-            / %h1.brand-name the Mills Computer Club
-      .row
-        .box
+%body
+  .container
+    .row
+      .box
+        .col-lg-12.text-center
+          #carousel-example-generic.carousel.slide
+            / Indicators
+            %ol.carousel-indicators.hidden-xs
+              %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+            / Wrapper for slides
+            .carousel-inner
+              .item.active
+                %img.img-responsive.img-full{:alt => "", :src => "img/slide-1.jpg"}
+              .item
+                %img.img-responsive.img-full{:alt => "", :src => "img/slide-2.jpg"}
+              .item
+                %img.img-responsive.img-full{:alt => "", :src => "img/slide-3.jpg"}
+              .item
+                %img.img-responsive.img-full{:alt => "", :src => "img/slide-4.jpg"}
+            / Controls
+            %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic"}
+              %span.icon-prev
+            %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic"}
+              %span.icon-next
+          / %h2.brand-before
+          /   %small Welcome to
+          / %h1.brand-name the Mills Computer Club
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              About the
+              %strong mills computer club
+            %hr
+        .col-md-6
+          %img.img-responsive.img-border-left{:alt => "A club picture not yet added", :src => "/img/slide-2.jpg"}
+        .col-md-6
+          %p The Mills Computer Club seeks to promote technical skill and professional opportunities for Mills College students interested in Computer Science and its related careers.
+          %p Our club members are a mix of undergraduate and graduate students, all with different levels of experience with Computer Science. We seek not just to strengthen our portfolios, academic skill and careers, but also to socialize and have fun!
+          %P Mills College is located in Oakland, part of the San Francisco Bay Area. The extensive technical environment in San Francisco, Silicon Valley, and the East Bay provides many workshops, conventions, and meet ups that club members are encouraged to attend. Examples of past events include:
+          %ul
+            %li The Grace Hopper Celebration of Women in Computing
+            %li Weekly JavaScript study groups, as part of Women Who Code - East Bay
+            %li Lesbians Who Tech Summit
+            %li ACM Richard Tapia Celebration of Diversity in Computing
+          %p Together with the Department of Mathematics and Computer Science, the college also hosts many guest speakers and workshops.
+        .clearfix
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              MCC
+              %strong Officers
+            %hr
+        = render partial: 'layouts/officer_profile', :collection => @mcc_officers, as: :officer
+        .clearfix
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              MICE
+              %strong Officers
+            %hr
+        = render partial: 'layouts/officer_profile', :collection => @mice_officers, as: :officer
+        .clearfix
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              Contact
+              %a{:name => 'contactUs'}
+              %strong Us
+            %hr
+              %img.img-responsive.img-border.img-left{:alt => "", :src => "img/intro-pic.jpg"}
+                %hr.visible-xs
+                  %p Location:
+                  %p Mills College
+                  %p 5000 MacArthur Blvd
+                  %p Oakland, CA 94613
+                  %p Regular meetings: Thursdays, Stern 14 from 4 PM to 5:30 PM. We change location on weeks where there are guest speakers and events. Check out events calendar for more information.
+                  %p
+                    Contact us through email at our
+                    %a{:href => "mailto:mcc@mills.edu"} official club mailing list,
+                    or contact our faculty advisors directly:
+                    %a{:href => "mailto:wang@mills.edu"} Professor Susan Wang
+                    or
+                    %a{:href => "mailto:akonrad@mills.edu"} Professor Almudena Konrad.
 
-          .col-lg-12
-            %hr
-              %h2.intro-text.text-center
-                About the
-                %strong mills computer club
-              %hr
-          .col-md-6
-            %img.img-responsive.img-border-left{:alt => "A club picture not yet added", :src => "/img/slide-2.jpg"}
-          .col-md-6
-            %p The Mills Computer Club seeks to promote technical skill and professional opportunities for Mills College students interested in Computer Science and its related careers.
-            %p Our club members are a mix of undergraduate and graduate students, all with different levels of experience with Computer Science. We seek not just to strengthen our portfolios, academic skill and careers, but also to socialize and have fun!
-            %P Mills College is located in Oakland, part of the San Francisco Bay Area. The extensive technical environment in San Francisco, Silicon Valley, and the East Bay provides many workshops, conventions, and meet ups that club members are encouraged to attend. Examples of past events include:
-            %ul
-              %li The Grace Hopper Celebration of Women in Computing
-              %li Weekly JavaScript study groups, as part of Women Who Code - East Bay
-              %li Lesbians Who Tech Summit
-              %li ACM Richard Tapia Celebration of Diversity in Computing
-            %p Together with the Department of Mathematics and Computer Science, the college also hosts many guest speakers and workshops.
-          .clearfix
-      .row
-        .box
-          .col-lg-12
-            %hr
-              %h2.intro-text.text-center
-                Our
-                %strong Officers
-              %hr
-          .col-sm-4.text-center
-            %img.img-responsive{:alt => "", :src => "/img/pres.jpg"}
-              %h3
-                Rachel Kawula
-                %br
-                %small President
-          .col-sm-4.text-center
-            %img.img-responsive{:alt => "", :src => "/img/vp.jpg"}
-              %h3
-                Heather Myers
-                %br
-                %small Honorary Vice President
-          .col-sm-4.text-center
-            %img.img-responsive{:alt => "", :src => "/img/treas.jpg"}
-              %h3
-                Winnie Cheung
-                %br
-                %small Treasurer
-          .col-sm-4.text-center
-            %img.img-responsive{:alt => "", :src => "/img/pr.jpg"}
-              %h3
-                Angelica Leyva-McMurtry
-                %br
-                %small Public Relations
-          .col-sm-4.text-center
-            %img.img-responsive{:alt => "", :src => "/img/hist.jpg"}
-              %h3
-                Allison David
-                %br
-                %small Historian
-          .clearfix
-      .row
-        .box
-          .col-lg-12
-            %hr
-              %h2.intro-text.text-center
-                Contact
-                %a{:name => 'contactUs'}
-                %strong Us
-              %hr
-                %img.img-responsive.img-border.img-left{:alt => "", :src => "img/intro-pic.jpg"}
-                  %hr.visible-xs
-                    %p Location:
-                    %p Mills College
-                    %p 5000 MacArthur Blvd
-                    %p Oakland, CA 94613
-                    %p Regular meetings: Thursdays, Stern 14 from 4 PM to 5:30 PM. We change location on weeks where there are guest speakers and events. Check out events calendar for more information.
-                    %p
-                      Contact us through email at our 
-                      %a{:href => "mailto:mcc@mills.edu"} official club mailing list,
-                      or contact our faculty advisors directly:
-                      %a{:href => "mailto:wang@mills.edu"} Professor Susan Wang
-                      or
-                      %a{:href => "mailto:akonrad@mills.edu"} Professor Almudena Konrad.
-                      
-                    %p
-                      You may also contact our club President at her
-                      %a{:href => "mailto:rkawula@mills.edu"} email address.
-
-    / Script to Activate the Carousel
-    :javascript
-    $(document).ready(function() {
-      $('.carousel').carousel({
-        interval: 5000
-      });
+  / Script to Activate the Carousel
+  :javascript
+  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 5000
     });
+  });
